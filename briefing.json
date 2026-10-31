@@ -1,0 +1,2465 @@
+{
+  "schema_version": 2,
+  "date_long": "Saturday, October 31",
+  "generated": "2026-10-31T16:10:54.725965+00:00",
+  "generated_local": "12:10 PM EDT",
+  "schedule_utc": [
+    "00:10",
+    "09:40",
+    "10:40",
+    "11:25",
+    "12:10",
+    "15:10",
+    "18:10",
+    "21:10"
+  ],
+  "spots": [
+    {
+      "schema_version": 2,
+      "spot_id": "dock",
+      "short_name": "Dock",
+      "is_pass": false,
+      "tides_label": "Tides at your dock",
+      "chart_note": "<b>Blue</b> = falling water; darker blue = fastest water in a Prime or Good window. Bottom strip shows night, twilight and daylight.",
+      "rules_text": "A Prime window has a moderate or strong falling tide whose fastest water overlaps first light or sunset, without strong wind, SSW\u2013WSW wind, storms, cool water (under 60\u00b0) or choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before); each drawback drops it one level. A weak fall, cold water (under 55\u00b0) or red tide nearby is always Marginal. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates.",
+      "date": "2026-10-31",
+      "date_long": "Saturday, October 31",
+      "location": "Indian Shores dock",
+      "generated": "2026-10-31T16:10:54.725965+00:00",
+      "generated_local": "12:10 PM EDT",
+      "headline": "This morning is the pick.",
+      "summary": "A strong 2.9 ft falling tide is running hardest around first light, with the fastest water around 7:15\u201310:25 AM. Expect a breezy ENE wind around 12 mph.",
+      "problems": [],
+      "windows": [
+        {
+          "time": "7:17 AM\u201312:35 PM",
+          "start": "2026-10-31T11:17:19.817193+00:00",
+          "end": "2026-10-31T16:35:00+00:00",
+          "rating": "Prime",
+          "strength": "Strong",
+          "size": "2.9 ft",
+          "fastest": [
+            "2026-10-31T11:17:19.817193+00:00",
+            "2026-10-31T14:25:30+00:00"
+          ],
+          "fastest_full": [
+            "2026-10-31T10:06:30+00:00",
+            "2026-10-31T14:25:30+00:00"
+          ],
+          "facts": [
+            "Strong fall \u00b7 2.9 ft high-to-low (3:57 AM \u2192 12:35 PM)",
+            "Fastest water ~7:15\u201310:25 AM",
+            "Peak flow overlaps first light",
+            "Breezy \u00b7 ENE 12 mph, gusts 20"
+          ],
+          "drawbacks": []
+        }
+      ],
+      "tides": [
+        {
+          "kind": "High",
+          "time": "3:57 AM",
+          "iso": "2026-10-31T07:57:00+00:00",
+          "height_ft": 2.92,
+          "value": "2.9 ft"
+        },
+        {
+          "kind": "Low",
+          "time": "12:35 PM",
+          "iso": "2026-10-31T16:35:00+00:00",
+          "height_ft": 0.05,
+          "value": "0.0 ft"
+        },
+        {
+          "kind": "High",
+          "time": "8:20 PM",
+          "iso": "2026-11-01T00:20:00+00:00",
+          "height_ft": 1.75,
+          "value": "1.7 ft"
+        },
+        {
+          "kind": "Low",
+          "time": "10:38 PM",
+          "iso": "2026-11-01T02:38:00+00:00",
+          "height_ft": 1.38,
+          "value": "1.4 ft"
+        }
+      ],
+      "has_chart": true,
+      "water_level": "Water is running 1.0 ft above prediction at Clearwater Beach (12:00 PM). Water is being held in; lows may not drain as far as shown.",
+      "weather": {
+        "temp": "72\u00b0 \u2013 84\u00b0",
+        "sky": "Storms possible",
+        "wind": "ENE 12\u201314",
+        "wind_sub": "mph \u00b7 gusts to 22",
+        "rain": "25%",
+        "rain_sub": "Max chance, evening",
+        "blocks": [
+          {
+            "label": "6a",
+            "temp": "72\u00b0",
+            "wind": "ENE 12"
+          },
+          {
+            "label": "9a",
+            "temp": "75\u00b0",
+            "wind": "ENE 12"
+          },
+          {
+            "label": "12p",
+            "temp": "82\u00b0",
+            "wind": "E 13"
+          },
+          {
+            "label": "3p",
+            "temp": "84\u00b0",
+            "wind": "E 13"
+          },
+          {
+            "label": "6p",
+            "temp": "81\u00b0",
+            "wind": "E 14"
+          },
+          {
+            "label": "9p",
+            "temp": "76\u00b0",
+            "wind": "ENE 14"
+          }
+        ]
+      },
+      "weather_source": "National Weather Service",
+      "weather_fallback": null,
+      "sun": {
+        "first_light": "7:17 AM",
+        "sunrise": "7:41",
+        "sunset": "6:47",
+        "last_light": "7:12 PM"
+      },
+      "water_temp": "74\u00b0",
+      "red_tide": {
+        "text": "Red tide: no FWC samples within 20 km over the last 8 days.",
+        "warn": false
+      },
+      "alerts": [],
+      "marine": "Bay and inland waters: a moderate chop (this afternoon)",
+      "upcoming": [
+        {
+          "date": "2026-11-01",
+          "weekday": "Sunday",
+          "sky": "Storms possible \u00b7 80\u00b0/71\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "strong fall 6:17\u20138:42 AM",
+              "rating": "Good",
+              "why": "storms"
+            },
+            {
+              "label": "PM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 13 mph, gusts 23 \u00b7 Rain 60%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "weekday": "Monday",
+          "sky": "Storms possible \u00b7 79\u00b0/68\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "strong fall 6:18\u20138:43 AM",
+              "rating": "Good",
+              "why": "storms"
+            },
+            {
+              "label": "PM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 12 mph, gusts 20 \u00b7 Rain 65%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "weekday": "Tuesday",
+          "sky": "Storms possible \u00b7 81\u00b0/68\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "moderate fall 7:54\u20138:44 AM",
+              "rating": "Good",
+              "why": "peak flow outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 8 mph, gusts 17 \u00b7 Rain 17%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "weekday": "Wednesday",
+          "sky": "Partly cloudy \u00b7 79\u00b0/70\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind SSE 7 mph, gusts 12 \u00b7 Rain 14%",
+          "hazards": []
+        }
+      ],
+      "days": [
+        {
+          "key": "2026-10-31",
+          "is_today": true,
+          "tab": "Today",
+          "date_long": "Saturday, October 31",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "84\u00b0/72\u00b0",
+          "best": {
+            "rating": "Prime",
+            "time": "7:17 AM\u201312:35 PM"
+          },
+          "headline": "This morning is the pick.",
+          "summary": "A strong 2.9 ft falling tide is running hardest around first light, with the fastest water around 7:15\u201310:25 AM. Expect a breezy ENE wind around 12 mph.",
+          "windows": [
+            {
+              "time": "7:17 AM\u201312:35 PM",
+              "start": "2026-10-31T11:17:19.817193+00:00",
+              "end": "2026-10-31T16:35:00+00:00",
+              "rating": "Prime",
+              "strength": "Strong",
+              "size": "2.9 ft",
+              "fastest": [
+                "2026-10-31T11:17:19.817193+00:00",
+                "2026-10-31T14:25:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-10-31T10:06:30+00:00",
+                "2026-10-31T14:25:30+00:00"
+              ],
+              "facts": [
+                "Strong fall \u00b7 2.9 ft high-to-low (3:57 AM \u2192 12:35 PM)",
+                "Fastest water ~7:15\u201310:25 AM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 ENE 12 mph, gusts 20"
+              ],
+              "drawbacks": []
+            }
+          ],
+          "tides": [
+            {
+              "kind": "High",
+              "time": "3:57 AM",
+              "iso": "2026-10-31T07:57:00+00:00",
+              "height_ft": 2.92,
+              "value": "2.9 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "12:35 PM",
+              "iso": "2026-10-31T16:35:00+00:00",
+              "height_ft": 0.05,
+              "value": "0.0 ft"
+            },
+            {
+              "kind": "High",
+              "time": "8:20 PM",
+              "iso": "2026-11-01T00:20:00+00:00",
+              "height_ft": 1.75,
+              "value": "1.7 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "10:38 PM",
+              "iso": "2026-11-01T02:38:00+00:00",
+              "height_ft": 1.38,
+              "value": "1.4 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "72\u00b0 \u2013 84\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 12\u201314",
+            "wind_sub": "mph \u00b7 gusts to 22",
+            "rain": "25%",
+            "rain_sub": "Max chance, evening",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "72\u00b0",
+                "wind": "ENE 12"
+              },
+              {
+                "label": "9a",
+                "temp": "75\u00b0",
+                "wind": "ENE 12"
+              },
+              {
+                "label": "12p",
+                "temp": "82\u00b0",
+                "wind": "E 13"
+              },
+              {
+                "label": "3p",
+                "temp": "84\u00b0",
+                "wind": "E 13"
+              },
+              {
+                "label": "6p",
+                "temp": "81\u00b0",
+                "wind": "E 14"
+              },
+              {
+                "label": "9p",
+                "temp": "76\u00b0",
+                "wind": "ENE 14"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "7:17 AM",
+            "sunrise": "7:41",
+            "sunset": "6:47",
+            "last_light": "7:12 PM"
+          }
+        },
+        {
+          "key": "2026-11-01",
+          "is_today": false,
+          "tab": "Sun",
+          "date_long": "Sunday, November 1",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "80\u00b0/71\u00b0",
+          "best": {
+            "rating": "Good",
+            "time": "6:17 AM\u201312:51 PM"
+          },
+          "headline": "Sunday morning is your best shot.",
+          "summary": "A strong 2.5 ft falling tide is running hardest around first light, with the fastest water around 6:25\u201310:40 AM. Expect a breezy ENE wind around 13 mph.",
+          "windows": [
+            {
+              "time": "6:17 AM\u201312:51 PM",
+              "start": "2026-11-01T11:17:58.845698+00:00",
+              "end": "2026-11-01T17:51:00+00:00",
+              "rating": "Good",
+              "strength": "Strong",
+              "size": "2.5 ft",
+              "fastest": [
+                "2026-11-01T11:25:30+00:00",
+                "2026-11-01T15:42:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-01T11:25:30+00:00",
+                "2026-11-01T15:42:30+00:00"
+              ],
+              "facts": [
+                "Strong fall \u00b7 2.5 ft high-to-low (4:17 AM \u2192 12:51 PM)",
+                "Fastest water ~6:25\u201310:40 AM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 ENE 13 mph, gusts 22",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "High",
+              "time": "4:17 AM",
+              "iso": "2026-11-01T09:17:00+00:00",
+              "height_ft": 2.7,
+              "value": "2.7 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "12:51 PM",
+              "iso": "2026-11-01T17:51:00+00:00",
+              "height_ft": 0.22,
+              "value": "0.2 ft"
+            },
+            {
+              "kind": "High",
+              "time": "8:25 PM",
+              "iso": "2026-11-02T01:25:00+00:00",
+              "height_ft": 1.85,
+              "value": "1.8 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "11:46 PM",
+              "iso": "2026-11-02T04:46:00+00:00",
+              "height_ft": 1.4,
+              "value": "1.4 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "71\u00b0 \u2013 80\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 12\u201315",
+            "wind_sub": "mph \u00b7 gusts to 23",
+            "rain": "60%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "72\u00b0",
+                "wind": "ENE 12"
+              },
+              {
+                "label": "9a",
+                "temp": "77\u00b0",
+                "wind": "E 13"
+              },
+              {
+                "label": "12p",
+                "temp": "80\u00b0",
+                "wind": "E 14"
+              },
+              {
+                "label": "3p",
+                "temp": "78\u00b0",
+                "wind": "E 14"
+              },
+              {
+                "label": "6p",
+                "temp": "74\u00b0",
+                "wind": "E 14"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "E 14"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:17 AM",
+            "sunrise": "6:42",
+            "sunset": "5:46",
+            "last_light": "6:11 PM"
+          }
+        },
+        {
+          "key": "2026-11-02",
+          "is_today": false,
+          "tab": "Mon",
+          "date_long": "Monday, November 2",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "79\u00b0/68\u00b0",
+          "best": {
+            "rating": "Good",
+            "time": "6:18 AM\u20132:02 PM"
+          },
+          "headline": "Monday morning is your best shot.",
+          "summary": "A strong 2.1 ft falling tide is running hardest around first light, with the fastest water around 8:00 AM\u201312:00 PM. Expect a breezy ENE wind around 12 mph.",
+          "windows": [
+            {
+              "time": "6:18 AM\u20132:02 PM",
+              "start": "2026-11-02T11:18:38.258288+00:00",
+              "end": "2026-11-02T19:02:00+00:00",
+              "rating": "Good",
+              "strength": "Strong",
+              "size": "2.1 ft",
+              "fastest": [
+                "2026-11-02T12:57:30+00:00",
+                "2026-11-02T17:00:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-02T12:57:30+00:00",
+                "2026-11-02T17:00:30+00:00"
+              ],
+              "facts": [
+                "Strong fall \u00b7 2.1 ft high-to-low (5:56 AM \u2192 2:02 PM)",
+                "Fastest water ~8:00 AM\u201312:00 PM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 ENE 12 mph, gusts 18",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "High",
+              "time": "5:56 AM",
+              "iso": "2026-11-02T10:56:00+00:00",
+              "height_ft": 2.5,
+              "value": "2.5 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "2:02 PM",
+              "iso": "2026-11-02T19:02:00+00:00",
+              "height_ft": 0.36,
+              "value": "0.4 ft"
+            },
+            {
+              "kind": "High",
+              "time": "9:01 PM",
+              "iso": "2026-11-03T02:01:00+00:00",
+              "height_ft": 2.0,
+              "value": "2.0 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "68\u00b0 \u2013 79\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 12\u201313",
+            "wind_sub": "mph \u00b7 gusts to 20",
+            "rain": "65%",
+            "rain_sub": "Max chance, morning",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "68\u00b0",
+                "wind": "ENE 12"
+              },
+              {
+                "label": "9a",
+                "temp": "74\u00b0",
+                "wind": "ENE 13"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "E 13"
+              },
+              {
+                "label": "3p",
+                "temp": "79\u00b0",
+                "wind": "ENE 13"
+              },
+              {
+                "label": "6p",
+                "temp": "76\u00b0",
+                "wind": "ENE 12"
+              },
+              {
+                "label": "9p",
+                "temp": "73\u00b0",
+                "wind": "ENE 12"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:18 AM",
+            "sunrise": "6:43",
+            "sunset": "5:46",
+            "last_light": "6:10 PM"
+          }
+        },
+        {
+          "key": "2026-11-03",
+          "is_today": false,
+          "tab": "Tue",
+          "date_long": "Tuesday, November 3",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "81\u00b0/68\u00b0",
+          "best": {
+            "rating": "Marginal",
+            "time": "7:54 AM\u20132:58 PM"
+          },
+          "headline": "A slow day for moving water.",
+          "summary": "A moderate 1.9 ft falling tide reaches first light, though its fastest water (~9:40 AM\u20131:10 PM) mostly falls outside it. Expect a breezy E wind around 9 mph.",
+          "windows": [
+            {
+              "time": "7:54 AM\u20132:58 PM",
+              "start": "2026-11-03T12:54:00+00:00",
+              "end": "2026-11-03T19:58:00+00:00",
+              "rating": "Marginal",
+              "strength": "Moderate",
+              "size": "1.9 ft",
+              "fastest": [
+                "2026-11-03T14:40:00+00:00",
+                "2026-11-03T18:12:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-03T14:40:00+00:00",
+                "2026-11-03T18:12:00+00:00"
+              ],
+              "facts": [
+                "Moderate fall \u00b7 1.9 ft high-to-low (7:54 AM \u2192 2:58 PM)",
+                "Fastest water ~9:40 AM\u20131:10 PM",
+                "Breezy \u00b7 E 9 mph, gusts 17",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "peak flow outside first light/sunset",
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Low",
+              "time": "2:07 AM",
+              "iso": "2026-11-03T07:07:00+00:00",
+              "height_ft": 1.21,
+              "value": "1.2 ft"
+            },
+            {
+              "kind": "High",
+              "time": "7:54 AM",
+              "iso": "2026-11-03T12:54:00+00:00",
+              "height_ft": 2.39,
+              "value": "2.4 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "2:58 PM",
+              "iso": "2026-11-03T19:58:00+00:00",
+              "height_ft": 0.49,
+              "value": "0.5 ft"
+            },
+            {
+              "kind": "High",
+              "time": "9:29 PM",
+              "iso": "2026-11-04T02:29:00+00:00",
+              "height_ft": 2.17,
+              "value": "2.2 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "68\u00b0 \u2013 81\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 6\u201310",
+            "wind_sub": "mph \u00b7 gusts to 17",
+            "rain": "17%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "68\u00b0",
+                "wind": "ENE 9"
+              },
+              {
+                "label": "9a",
+                "temp": "74\u00b0",
+                "wind": "E 10"
+              },
+              {
+                "label": "12p",
+                "temp": "80\u00b0",
+                "wind": "E 9"
+              },
+              {
+                "label": "3p",
+                "temp": "81\u00b0",
+                "wind": "ENE 7"
+              },
+              {
+                "label": "6p",
+                "temp": "77\u00b0",
+                "wind": "ENE 6"
+              },
+              {
+                "label": "9p",
+                "temp": "74\u00b0",
+                "wind": "E 9"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:19 AM",
+            "sunrise": "6:44",
+            "sunset": "5:45",
+            "last_light": "6:10 PM"
+          }
+        },
+        {
+          "key": "2026-11-04",
+          "is_today": false,
+          "tab": "Wed",
+          "date_long": "Wednesday, November 4",
+          "icon": "\u26c5",
+          "high_low": "79\u00b0/70\u00b0",
+          "best": {
+            "rating": "Good",
+            "time": "9:22 AM\u20133:43 PM"
+          },
+          "headline": "Wednesday morning is your best shot.",
+          "summary": "A moderate 1.7 ft falling tide runs 9:22 AM\u20133:43 PM, with the fastest water around 10:55 AM\u20132:10 PM. Expect a light SSE wind around 7 mph.",
+          "windows": [
+            {
+              "time": "9:22 AM\u20133:43 PM",
+              "start": "2026-11-04T14:22:00+00:00",
+              "end": "2026-11-04T20:43:00+00:00",
+              "rating": "Good",
+              "strength": "Moderate",
+              "size": "1.7 ft",
+              "fastest": [
+                "2026-11-04T15:57:15+00:00",
+                "2026-11-04T19:07:45+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-04T15:57:15+00:00",
+                "2026-11-04T19:07:45+00:00"
+              ],
+              "facts": [
+                "Moderate fall \u00b7 1.7 ft high-to-low (9:22 AM \u2192 3:43 PM)",
+                "Fastest water ~10:55 AM\u20132:10 PM",
+                "Midday \u2014 outside first light and sunset",
+                "Calm \u00b7 SSE 7 mph, gusts 12"
+              ],
+              "drawbacks": [
+                "midday water"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Low",
+              "time": "3:18 AM",
+              "iso": "2026-11-04T08:18:00+00:00",
+              "height_ft": 0.9,
+              "value": "0.9 ft"
+            },
+            {
+              "kind": "High",
+              "time": "9:22 AM",
+              "iso": "2026-11-04T14:22:00+00:00",
+              "height_ft": 2.37,
+              "value": "2.4 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "3:43 PM",
+              "iso": "2026-11-04T20:43:00+00:00",
+              "height_ft": 0.62,
+              "value": "0.6 ft"
+            },
+            {
+              "kind": "High",
+              "time": "9:53 PM",
+              "iso": "2026-11-05T02:53:00+00:00",
+              "height_ft": 2.36,
+              "value": "2.4 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "70\u00b0 \u2013 79\u00b0",
+            "sky": "Partly cloudy",
+            "wind": "SSE 6\u20138",
+            "wind_sub": "mph \u00b7 gusts to 12",
+            "rain": "14%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "70\u00b0",
+                "wind": "E 7"
+              },
+              {
+                "label": "9a",
+                "temp": "75\u00b0",
+                "wind": "ESE 8"
+              },
+              {
+                "label": "12p",
+                "temp": "79\u00b0",
+                "wind": "SSE 7"
+              },
+              {
+                "label": "3p",
+                "temp": "79\u00b0",
+                "wind": "SSW 7"
+              },
+              {
+                "label": "6p",
+                "temp": "77\u00b0",
+                "wind": "SSE 5"
+              },
+              {
+                "label": "9p",
+                "temp": "74\u00b0",
+                "wind": "ESE 5"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:19 AM",
+            "sunrise": "6:44",
+            "sunset": "5:44",
+            "last_light": "6:09 PM"
+          }
+        }
+      ],
+      "sources": [
+        "Tides: NOAA 8726625 Indian Rocks Beach (inside) predictions",
+        "Weather: National Weather Service (updated 3:01 AM)",
+        "Observations: NOAA 8726724 Clearwater Beach",
+        "Red tide: FWC Karenia brevis samples"
+      ],
+      "station_name": "Clearwater Beach",
+      "app_url": "https://blakezurman.github.io/inshore-briefing-site/"
+    },
+    {
+      "schema_version": 2,
+      "spot_id": "clearwater-pass",
+      "short_name": "Clearwater",
+      "is_pass": true,
+      "tides_label": "Current at Clearwater Pass, 0.2 mi NE of Sand Key",
+      "chart_note": "<b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime or Good window. Bottom strip shows night, twilight and daylight.",
+      "rules_text": "A Prime window has a moderate or strong outgoing current (peak 0.75 kt or more) whose strongest current overlaps first light or sunset, without strong wind, SSW\u2013WNW wind, storms or cool water (under 60\u00b0); each drawback drops it one level. A weak outgoing current, cold water (under 55\u00b0), red tide nearby or choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) is always Marginal. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates.",
+      "date": "2026-10-31",
+      "date_long": "Saturday, October 31",
+      "location": "Clearwater Pass",
+      "generated": "2026-10-31T16:10:54.725965+00:00",
+      "generated_local": "12:10 PM EDT",
+      "headline": "This morning is the pick.",
+      "summary": "A strong 1.6 kt outgoing current is running hardest around first light, with the strongest current around 7:15\u201310:00 AM. Expect a breezy ENE wind around 9 mph.",
+      "problems": [],
+      "windows": [
+        {
+          "time": "7:17 AM\u201312:11 PM",
+          "start": "2026-10-31T11:17:23.974673+00:00",
+          "end": "2026-10-31T16:11:00+00:00",
+          "rating": "Prime",
+          "strength": "Strong",
+          "size": "1.6 kt",
+          "fastest": [
+            "2026-10-31T11:17:23.974673+00:00",
+            "2026-10-31T13:59:30+00:00"
+          ],
+          "fastest_full": [
+            "2026-10-31T09:29:00+00:00",
+            "2026-10-31T13:59:30+00:00"
+          ],
+          "facts": [
+            "Strong outgoing current \u00b7 1.6 kt peak at 7:48 AM (slack 3:10 AM \u2192 12:11 PM)",
+            "Strongest current ~7:15\u201310:00 AM",
+            "Peak flow overlaps first light",
+            "Breezy \u00b7 ENE 9 mph, gusts 18"
+          ],
+          "drawbacks": []
+        }
+      ],
+      "tides": [
+        {
+          "kind": "Out",
+          "time": "7:48 AM",
+          "iso": "2026-10-31T11:48:00+00:00",
+          "value": "1.6 kt"
+        },
+        {
+          "kind": "In",
+          "time": "3:18 PM",
+          "iso": "2026-10-31T19:18:00+00:00",
+          "value": "1.3 kt"
+        },
+        {
+          "kind": "In",
+          "time": "8:44 PM",
+          "iso": "2026-11-01T00:44:00+00:00",
+          "value": "0.3 kt"
+        }
+      ],
+      "has_chart": true,
+      "water_level": "Water is running 1.0 ft above prediction at Clearwater Beach (12:00 PM). Water is being held in; lows may not drain as far as shown.",
+      "weather": {
+        "temp": "72\u00b0 \u2013 83\u00b0",
+        "sky": "Storms possible",
+        "wind": "E 8\u201312",
+        "wind_sub": "mph \u00b7 gusts to 22",
+        "rain": "22%",
+        "rain_sub": "Max chance, evening",
+        "blocks": [
+          {
+            "label": "6a",
+            "temp": "72\u00b0",
+            "wind": "ENE 8"
+          },
+          {
+            "label": "9a",
+            "temp": "74\u00b0",
+            "wind": "ENE 9"
+          },
+          {
+            "label": "12p",
+            "temp": "80\u00b0",
+            "wind": "E 10"
+          },
+          {
+            "label": "3p",
+            "temp": "83\u00b0",
+            "wind": "E 12"
+          },
+          {
+            "label": "6p",
+            "temp": "80\u00b0",
+            "wind": "E 12"
+          },
+          {
+            "label": "9p",
+            "temp": "75\u00b0",
+            "wind": "ENE 10"
+          }
+        ]
+      },
+      "weather_source": "National Weather Service",
+      "weather_fallback": null,
+      "sun": {
+        "first_light": "7:17 AM",
+        "sunrise": "7:42",
+        "sunset": "6:47",
+        "last_light": "7:11 PM"
+      },
+      "water_temp": "74\u00b0",
+      "red_tide": {
+        "text": "Red tide: no FWC samples within 20 km over the last 8 days.",
+        "warn": false
+      },
+      "alerts": [],
+      "marine": "Bay and inland waters: a moderate chop (this afternoon)",
+      "upcoming": [
+        {
+          "date": "2026-11-01",
+          "weekday": "Sunday",
+          "sky": "Storms possible \u00b7 78\u00b0/70\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "moderate outgoing current 6:18\u20138:42 AM",
+              "rating": "Good",
+              "why": "storms"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind E 11 mph, gusts 23 \u00b7 Rain 59%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "weekday": "Monday",
+          "sky": "Storms possible \u00b7 78\u00b0/68\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "moderate outgoing current 6:18\u20138:43 AM",
+              "rating": "Good",
+              "why": "storms"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 10 mph, gusts 20 \u00b7 Rain 64%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "weekday": "Tuesday",
+          "sky": "Storms possible \u00b7 80\u00b0/68\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "moderate outgoing current 7:05\u20138:44 AM",
+              "rating": "Good",
+              "why": "peak flow outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind E 7 mph, gusts 16 \u00b7 Rain 17%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "weekday": "Wednesday",
+          "sky": "Partly cloudy \u00b7 80\u00b0/70\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind SSE 7 mph, gusts 12 \u00b7 Rain 14%",
+          "hazards": []
+        }
+      ],
+      "days": [
+        {
+          "key": "2026-10-31",
+          "is_today": true,
+          "tab": "Today",
+          "date_long": "Saturday, October 31",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "83\u00b0/72\u00b0",
+          "best": {
+            "rating": "Prime",
+            "time": "7:17 AM\u201312:11 PM"
+          },
+          "headline": "This morning is the pick.",
+          "summary": "A strong 1.6 kt outgoing current is running hardest around first light, with the strongest current around 7:15\u201310:00 AM. Expect a breezy ENE wind around 9 mph.",
+          "windows": [
+            {
+              "time": "7:17 AM\u201312:11 PM",
+              "start": "2026-10-31T11:17:23.974673+00:00",
+              "end": "2026-10-31T16:11:00+00:00",
+              "rating": "Prime",
+              "strength": "Strong",
+              "size": "1.6 kt",
+              "fastest": [
+                "2026-10-31T11:17:23.974673+00:00",
+                "2026-10-31T13:59:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-10-31T09:29:00+00:00",
+                "2026-10-31T13:59:30+00:00"
+              ],
+              "facts": [
+                "Strong outgoing current \u00b7 1.6 kt peak at 7:48 AM (slack 3:10 AM \u2192 12:11 PM)",
+                "Strongest current ~7:15\u201310:00 AM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 ENE 9 mph, gusts 18"
+              ],
+              "drawbacks": []
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "7:48 AM",
+              "iso": "2026-10-31T11:48:00+00:00",
+              "value": "1.6 kt"
+            },
+            {
+              "kind": "In",
+              "time": "3:18 PM",
+              "iso": "2026-10-31T19:18:00+00:00",
+              "value": "1.3 kt"
+            },
+            {
+              "kind": "In",
+              "time": "8:44 PM",
+              "iso": "2026-11-01T00:44:00+00:00",
+              "value": "0.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "72\u00b0 \u2013 83\u00b0",
+            "sky": "Storms possible",
+            "wind": "E 8\u201312",
+            "wind_sub": "mph \u00b7 gusts to 22",
+            "rain": "22%",
+            "rain_sub": "Max chance, evening",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "72\u00b0",
+                "wind": "ENE 8"
+              },
+              {
+                "label": "9a",
+                "temp": "74\u00b0",
+                "wind": "ENE 9"
+              },
+              {
+                "label": "12p",
+                "temp": "80\u00b0",
+                "wind": "E 10"
+              },
+              {
+                "label": "3p",
+                "temp": "83\u00b0",
+                "wind": "E 12"
+              },
+              {
+                "label": "6p",
+                "temp": "80\u00b0",
+                "wind": "E 12"
+              },
+              {
+                "label": "9p",
+                "temp": "75\u00b0",
+                "wind": "ENE 10"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "7:17 AM",
+            "sunrise": "7:42",
+            "sunset": "6:47",
+            "last_light": "7:11 PM"
+          }
+        },
+        {
+          "key": "2026-11-01",
+          "is_today": false,
+          "tab": "Sun",
+          "date_long": "Sunday, November 1",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "78\u00b0/70\u00b0",
+          "best": {
+            "rating": "Good",
+            "time": "6:18 AM\u201312:22 PM"
+          },
+          "headline": "Sunday morning is your best shot.",
+          "summary": "A moderate 1.3 kt outgoing current is running hardest around first light, with the strongest current around 6:20\u201310:20 AM. Expect a breezy E wind around 11 mph.",
+          "windows": [
+            {
+              "time": "6:18 AM\u201312:22 PM",
+              "start": "2026-11-01T11:18:03.202122+00:00",
+              "end": "2026-11-01T17:22:00+00:00",
+              "rating": "Good",
+              "strength": "Moderate",
+              "size": "1.3 kt",
+              "fastest": [
+                "2026-11-01T11:18:03.202122+00:00",
+                "2026-11-01T15:19:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-01T10:50:00+00:00",
+                "2026-11-01T15:19:00+00:00"
+              ],
+              "facts": [
+                "Moderate outgoing current \u00b7 1.3 kt peak at 8:16 AM (slack 3:24 AM \u2192 12:22 PM)",
+                "Strongest current ~6:20\u201310:20 AM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 E 11 mph, gusts 21",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "In",
+              "time": "1:04 AM",
+              "iso": "2026-11-01T05:04:00+00:00",
+              "value": "0.7 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "8:16 AM",
+              "iso": "2026-11-01T13:16:00+00:00",
+              "value": "1.3 kt"
+            },
+            {
+              "kind": "In",
+              "time": "3:26 PM",
+              "iso": "2026-11-01T20:26:00+00:00",
+              "value": "1.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "70\u00b0 \u2013 78\u00b0",
+            "sky": "Storms possible",
+            "wind": "E 9\u201313",
+            "wind_sub": "mph \u00b7 gusts to 23",
+            "rain": "59%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "71\u00b0",
+                "wind": "ENE 9"
+              },
+              {
+                "label": "9a",
+                "temp": "75\u00b0",
+                "wind": "E 10"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "E 12"
+              },
+              {
+                "label": "3p",
+                "temp": "76\u00b0",
+                "wind": "E 13"
+              },
+              {
+                "label": "6p",
+                "temp": "72\u00b0",
+                "wind": "E 12"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "E 9"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:18 AM",
+            "sunrise": "6:42",
+            "sunset": "5:46",
+            "last_light": "6:11 PM"
+          }
+        },
+        {
+          "key": "2026-11-02",
+          "is_today": false,
+          "tab": "Mon",
+          "date_long": "Monday, November 2",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "78\u00b0/68\u00b0",
+          "best": {
+            "rating": "Good",
+            "time": "6:18 AM\u20131:23 PM"
+          },
+          "headline": "Monday morning is your best shot.",
+          "summary": "A moderate 1.1 kt outgoing current is running hardest around first light, with the strongest current around 7:30\u201311:40 AM. Expect a breezy ENE wind around 10 mph.",
+          "windows": [
+            {
+              "time": "6:18 AM\u20131:23 PM",
+              "start": "2026-11-02T11:18:42.811835+00:00",
+              "end": "2026-11-02T18:23:00+00:00",
+              "rating": "Good",
+              "strength": "Moderate",
+              "size": "1.1 kt",
+              "fastest": [
+                "2026-11-02T12:31:30+00:00",
+                "2026-11-02T16:41:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-02T12:31:30+00:00",
+                "2026-11-02T16:41:30+00:00"
+              ],
+              "facts": [
+                "Moderate outgoing current \u00b7 1.1 kt peak at 10:00 AM (slack 5:03 AM \u2192 1:23 PM)",
+                "Strongest current ~7:30\u201311:40 AM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 ENE 10 mph, gusts 18",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "In",
+              "time": "1:55 AM",
+              "iso": "2026-11-02T06:55:00+00:00",
+              "value": "0.6 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "10:00 AM",
+              "iso": "2026-11-02T15:00:00+00:00",
+              "value": "1.1 kt"
+            },
+            {
+              "kind": "In",
+              "time": "4:24 PM",
+              "iso": "2026-11-02T21:24:00+00:00",
+              "value": "1.3 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "11:28 PM",
+              "iso": "2026-11-03T04:28:00+00:00",
+              "value": "0.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "68\u00b0 \u2013 78\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 8\u201312",
+            "wind_sub": "mph \u00b7 gusts to 20",
+            "rain": "64%",
+            "rain_sub": "Max chance, morning",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "68\u00b0",
+                "wind": "ENE 8"
+              },
+              {
+                "label": "9a",
+                "temp": "72\u00b0",
+                "wind": "E 10"
+              },
+              {
+                "label": "12p",
+                "temp": "76\u00b0",
+                "wind": "E 12"
+              },
+              {
+                "label": "3p",
+                "temp": "78\u00b0",
+                "wind": "ENE 12"
+              },
+              {
+                "label": "6p",
+                "temp": "74\u00b0",
+                "wind": "ENE 9"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "ENE 8"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:18 AM",
+            "sunrise": "6:43",
+            "sunset": "5:45",
+            "last_light": "6:10 PM"
+          }
+        },
+        {
+          "key": "2026-11-03",
+          "is_today": false,
+          "tab": "Tue",
+          "date_long": "Tuesday, November 3",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "80\u00b0/68\u00b0",
+          "best": {
+            "rating": "Marginal",
+            "time": "7:05 AM\u20132:12 PM"
+          },
+          "headline": "A slow day for moving water.",
+          "summary": "A moderate 1.0 kt outgoing current reaches first light, though its strongest current (~9:10 AM\u201312:45 PM) mostly falls outside it. Expect a light E wind around 7 mph.",
+          "windows": [
+            {
+              "time": "7:05 AM\u20132:12 PM",
+              "start": "2026-11-03T12:05:00+00:00",
+              "end": "2026-11-03T19:12:00+00:00",
+              "rating": "Marginal",
+              "strength": "Moderate",
+              "size": "1.0 kt",
+              "fastest": [
+                "2026-11-03T14:11:00+00:00",
+                "2026-11-03T17:44:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-03T14:11:00+00:00",
+                "2026-11-03T17:44:30+00:00"
+              ],
+              "facts": [
+                "Moderate outgoing current \u00b7 1.0 kt peak at 11:17 AM (slack 7:05 AM \u2192 2:12 PM)",
+                "Strongest current ~9:10 AM\u201312:45 PM",
+                "Calm \u00b7 E 7 mph, gusts 16",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "peak flow outside first light/sunset",
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "In",
+              "time": "3:53 AM",
+              "iso": "2026-11-03T08:53:00+00:00",
+              "value": "0.7 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "11:17 AM",
+              "iso": "2026-11-03T16:17:00+00:00",
+              "value": "1.0 kt"
+            },
+            {
+              "kind": "In",
+              "time": "5:10 PM",
+              "iso": "2026-11-03T22:10:00+00:00",
+              "value": "1.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "68\u00b0 \u2013 80\u00b0",
+            "sky": "Storms possible",
+            "wind": "E 6\u20138",
+            "wind_sub": "mph \u00b7 gusts to 16",
+            "rain": "17%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "68\u00b0",
+                "wind": "ENE 7"
+              },
+              {
+                "label": "9a",
+                "temp": "73\u00b0",
+                "wind": "E 8"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "E 8"
+              },
+              {
+                "label": "3p",
+                "temp": "80\u00b0",
+                "wind": "ENE 7"
+              },
+              {
+                "label": "6p",
+                "temp": "76\u00b0",
+                "wind": "ENE 5"
+              },
+              {
+                "label": "9p",
+                "temp": "75\u00b0",
+                "wind": "E 9"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:19 AM",
+            "sunrise": "6:44",
+            "sunset": "5:45",
+            "last_light": "6:09 PM"
+          }
+        },
+        {
+          "key": "2026-11-04",
+          "is_today": false,
+          "tab": "Wed",
+          "date_long": "Wednesday, November 4",
+          "icon": "\u26c5",
+          "high_low": "80\u00b0/70\u00b0",
+          "best": {
+            "rating": "Good",
+            "time": "8:45 AM\u20132:51 PM"
+          },
+          "headline": "Wednesday morning is your best shot.",
+          "summary": "A moderate 0.8 kt outgoing current runs 8:45 AM\u20132:51 PM, with the strongest current around 10:30 AM\u20131:35 PM. Expect a light SE wind around 7 mph.",
+          "windows": [
+            {
+              "time": "8:45 AM\u20132:51 PM",
+              "start": "2026-11-04T13:45:00+00:00",
+              "end": "2026-11-04T19:51:00+00:00",
+              "rating": "Good",
+              "strength": "Moderate",
+              "size": "0.8 kt",
+              "fastest": [
+                "2026-11-04T15:30:00+00:00",
+                "2026-11-04T18:33:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-04T15:30:00+00:00",
+                "2026-11-04T18:33:00+00:00"
+              ],
+              "facts": [
+                "Moderate outgoing current \u00b7 0.8 kt peak at 12:15 PM (slack 8:45 AM \u2192 2:51 PM)",
+                "Strongest current ~10:30 AM\u20131:35 PM",
+                "Midday \u2014 outside first light and sunset",
+                "Calm \u00b7 SE 7 mph, gusts 12"
+              ],
+              "drawbacks": [
+                "midday water"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "12:11 AM",
+              "iso": "2026-11-04T05:11:00+00:00",
+              "value": "0.7 kt"
+            },
+            {
+              "kind": "In",
+              "time": "5:24 AM",
+              "iso": "2026-11-04T10:24:00+00:00",
+              "value": "1.0 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "12:15 PM",
+              "iso": "2026-11-04T17:15:00+00:00",
+              "value": "0.8 kt"
+            },
+            {
+              "kind": "In",
+              "time": "5:45 PM",
+              "iso": "2026-11-04T22:45:00+00:00",
+              "value": "1.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "70\u00b0 \u2013 80\u00b0",
+            "sky": "Partly cloudy",
+            "wind": "SSE 7\u20138",
+            "wind_sub": "mph \u00b7 gusts to 12",
+            "rain": "14%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "70\u00b0",
+                "wind": "E 7"
+              },
+              {
+                "label": "9a",
+                "temp": "75\u00b0",
+                "wind": "ESE 7"
+              },
+              {
+                "label": "12p",
+                "temp": "79\u00b0",
+                "wind": "SSE 7"
+              },
+              {
+                "label": "3p",
+                "temp": "80\u00b0",
+                "wind": "SSW 7"
+              },
+              {
+                "label": "6p",
+                "temp": "78\u00b0",
+                "wind": "SE 6"
+              },
+              {
+                "label": "9p",
+                "temp": "74\u00b0",
+                "wind": "ESE 5"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:20 AM",
+            "sunrise": "6:44",
+            "sunset": "5:44",
+            "last_light": "6:09 PM"
+          }
+        }
+      ],
+      "sources": [
+        "Currents: NOAA ACT8656 Clearwater Pass, 0.2 mi NE of Sand Key predictions",
+        "Weather: National Weather Service (updated 3:01 AM)",
+        "Observations: NOAA 8726724 Clearwater Beach",
+        "Red tide: FWC Karenia brevis samples"
+      ],
+      "station_name": "Clearwater Beach",
+      "app_url": "https://blakezurman.github.io/inshore-briefing-site/"
+    },
+    {
+      "schema_version": 2,
+      "spot_id": "johns-pass",
+      "short_name": "Johns Pass",
+      "is_pass": true,
+      "tides_label": "Current at Johns Pass Entrance",
+      "chart_note": "<b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime or Good window. Bottom strip shows night, twilight and daylight.",
+      "rules_text": "A Prime window has a moderate or strong outgoing current (peak 0.75 kt or more) whose strongest current overlaps first light or sunset, without strong wind, SSW\u2013WNW wind, storms or cool water (under 60\u00b0); each drawback drops it one level. A weak outgoing current, cold water (under 55\u00b0), red tide nearby or choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) is always Marginal. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates.",
+      "date": "2026-10-31",
+      "date_long": "Saturday, October 31",
+      "location": "Johns Pass",
+      "generated": "2026-10-31T16:10:54.725965+00:00",
+      "generated_local": "12:10 PM EDT",
+      "headline": "Choppy, murky water; expect a slow bite.",
+      "summary": "A strong 1.8 kt outgoing current is running hardest around first light, with the strongest current around 7:15\u201310:40 AM. Expect a breezy ENE wind around 15 mph.",
+      "problems": [],
+      "windows": [
+        {
+          "time": "7:17 AM\u201312:48 PM",
+          "start": "2026-10-31T11:17:03.454495+00:00",
+          "end": "2026-10-31T16:48:00+00:00",
+          "rating": "Marginal",
+          "strength": "Strong",
+          "size": "1.8 kt",
+          "fastest": [
+            "2026-10-31T11:17:03.454495+00:00",
+            "2026-10-31T14:41:00+00:00"
+          ],
+          "fastest_full": [
+            "2026-10-31T09:47:30+00:00",
+            "2026-10-31T14:41:00+00:00"
+          ],
+          "facts": [
+            "Strong outgoing current \u00b7 1.8 kt peak at 8:34 AM (slack 3:01 AM \u2192 12:48 PM)",
+            "Strongest current ~7:15\u201310:40 AM",
+            "Peak flow overlaps first light",
+            "Breezy \u00b7 ENE 15 mph, gusts 22",
+            "Wind averaged 15 mph over this window and the 12 h before: expect choppy, murky water"
+          ],
+          "drawbacks": [
+            "choppy, murky water"
+          ]
+        }
+      ],
+      "tides": [
+        {
+          "kind": "In",
+          "time": "12:08 AM",
+          "iso": "2026-10-31T04:08:00+00:00",
+          "value": "0.5 kt"
+        },
+        {
+          "kind": "Out",
+          "time": "8:34 AM",
+          "iso": "2026-10-31T12:34:00+00:00",
+          "value": "1.8 kt"
+        },
+        {
+          "kind": "In",
+          "time": "3:53 PM",
+          "iso": "2026-10-31T19:53:00+00:00",
+          "value": "0.4 kt"
+        }
+      ],
+      "has_chart": true,
+      "water_level": "Water is running 1.0 ft above prediction at Clearwater Beach (12:00 PM). Water is being held in; lows may not drain as far as shown.",
+      "weather": {
+        "temp": "73\u00b0 \u2013 82\u00b0",
+        "sky": "Storms possible",
+        "wind": "ENE 15\u201318",
+        "wind_sub": "mph \u00b7 gusts to 25",
+        "rain": "25%",
+        "rain_sub": "Max chance, evening",
+        "blocks": [
+          {
+            "label": "6a",
+            "temp": "73\u00b0",
+            "wind": "ENE 15"
+          },
+          {
+            "label": "9a",
+            "temp": "75\u00b0",
+            "wind": "ENE 15"
+          },
+          {
+            "label": "12p",
+            "temp": "80\u00b0",
+            "wind": "E 15"
+          },
+          {
+            "label": "3p",
+            "temp": "82\u00b0",
+            "wind": "E 16"
+          },
+          {
+            "label": "6p",
+            "temp": "81\u00b0",
+            "wind": "E 18"
+          },
+          {
+            "label": "9p",
+            "temp": "76\u00b0",
+            "wind": "ENE 18"
+          }
+        ]
+      },
+      "weather_source": "National Weather Service",
+      "weather_fallback": null,
+      "sun": {
+        "first_light": "7:17 AM",
+        "sunrise": "7:41",
+        "sunset": "6:47",
+        "last_light": "7:12 PM"
+      },
+      "water_temp": "74\u00b0",
+      "red_tide": {
+        "text": "Red tide: no FWC samples within 20 km over the last 8 days.",
+        "warn": false
+      },
+      "alerts": [],
+      "marine": "Bay and inland waters: a moderate chop (this afternoon)",
+      "upcoming": [
+        {
+          "date": "2026-11-01",
+          "weekday": "Sunday",
+          "sky": "Storms possible \u00b7 78\u00b0/72\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "strong outgoing current 6:17\u20138:42 AM",
+              "rating": "Marginal",
+              "why": "choppy, murky water, windy, storms"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 17 mph, gusts 26 \u00b7 Rain 60%",
+          "hazards": [
+            "Thunderstorms possible",
+            "Windy \u2014 ENE 17 mph, gusts 26"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "weekday": "Monday",
+          "sky": "Storms possible \u00b7 78\u00b0/69\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "moderate outgoing current 6:18\u20138:43 AM",
+              "rating": "Marginal",
+              "why": "choppy, murky water, storms"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 15 mph, gusts 23 \u00b7 Rain 65%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "weekday": "Tuesday",
+          "sky": "Storms possible \u00b7 80\u00b0/69\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "moderate outgoing current 6:19\u20138:43 AM",
+              "rating": "Marginal",
+              "why": "choppy, murky water, peak flow outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 10 mph, gusts 18 \u00b7 Rain 18%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "weekday": "Wednesday",
+          "sky": "Storms possible \u00b7 80\u00b0/70\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "moderate outgoing current 7:27\u20138:44 AM",
+              "rating": "Good",
+              "why": "peak flow outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind SSE 8 mph, gusts 13 \u00b7 Rain 15%",
+          "hazards": [
+            "Thunderstorms possible"
+          ]
+        }
+      ],
+      "days": [
+        {
+          "key": "2026-10-31",
+          "is_today": true,
+          "tab": "Today",
+          "date_long": "Saturday, October 31",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "82\u00b0/73\u00b0",
+          "best": {
+            "rating": "Marginal",
+            "time": "7:17 AM\u201312:48 PM"
+          },
+          "headline": "Choppy, murky water; expect a slow bite.",
+          "summary": "A strong 1.8 kt outgoing current is running hardest around first light, with the strongest current around 7:15\u201310:40 AM. Expect a breezy ENE wind around 15 mph.",
+          "windows": [
+            {
+              "time": "7:17 AM\u201312:48 PM",
+              "start": "2026-10-31T11:17:03.454495+00:00",
+              "end": "2026-10-31T16:48:00+00:00",
+              "rating": "Marginal",
+              "strength": "Strong",
+              "size": "1.8 kt",
+              "fastest": [
+                "2026-10-31T11:17:03.454495+00:00",
+                "2026-10-31T14:41:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-10-31T09:47:30+00:00",
+                "2026-10-31T14:41:00+00:00"
+              ],
+              "facts": [
+                "Strong outgoing current \u00b7 1.8 kt peak at 8:34 AM (slack 3:01 AM \u2192 12:48 PM)",
+                "Strongest current ~7:15\u201310:40 AM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 ENE 15 mph, gusts 22",
+                "Wind averaged 15 mph over this window and the 12 h before: expect choppy, murky water"
+              ],
+              "drawbacks": [
+                "choppy, murky water"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "In",
+              "time": "12:08 AM",
+              "iso": "2026-10-31T04:08:00+00:00",
+              "value": "0.5 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "8:34 AM",
+              "iso": "2026-10-31T12:34:00+00:00",
+              "value": "1.8 kt"
+            },
+            {
+              "kind": "In",
+              "time": "3:53 PM",
+              "iso": "2026-10-31T19:53:00+00:00",
+              "value": "0.4 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "73\u00b0 \u2013 82\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 15\u201318",
+            "wind_sub": "mph \u00b7 gusts to 25",
+            "rain": "25%",
+            "rain_sub": "Max chance, evening",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "73\u00b0",
+                "wind": "ENE 15"
+              },
+              {
+                "label": "9a",
+                "temp": "75\u00b0",
+                "wind": "ENE 15"
+              },
+              {
+                "label": "12p",
+                "temp": "80\u00b0",
+                "wind": "E 15"
+              },
+              {
+                "label": "3p",
+                "temp": "82\u00b0",
+                "wind": "E 16"
+              },
+              {
+                "label": "6p",
+                "temp": "81\u00b0",
+                "wind": "E 18"
+              },
+              {
+                "label": "9p",
+                "temp": "76\u00b0",
+                "wind": "ENE 18"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "7:17 AM",
+            "sunrise": "7:41",
+            "sunset": "6:47",
+            "last_light": "7:12 PM"
+          }
+        },
+        {
+          "key": "2026-11-01",
+          "is_today": false,
+          "tab": "Sun",
+          "date_long": "Sunday, November 1",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "78\u00b0/72\u00b0",
+          "best": {
+            "rating": "Marginal",
+            "time": "6:17 AM\u201312:49 PM"
+          },
+          "headline": "Choppy, murky water; expect a slow bite.",
+          "summary": "A strong 1.5 kt outgoing current is running hardest around first light, with the strongest current around 6:20\u201310:40 AM. Expect a strong ENE wind around 17 mph.",
+          "windows": [
+            {
+              "time": "6:17 AM\u201312:49 PM",
+              "start": "2026-11-01T11:17:42.369568+00:00",
+              "end": "2026-11-01T17:49:00+00:00",
+              "rating": "Marginal",
+              "strength": "Strong",
+              "size": "1.5 kt",
+              "fastest": [
+                "2026-11-01T11:17:42.369568+00:00",
+                "2026-11-01T15:39:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-01T10:49:00+00:00",
+                "2026-11-01T15:39:30+00:00"
+              ],
+              "facts": [
+                "Strong outgoing current \u00b7 1.5 kt peak at 8:30 AM (slack 3:08 AM \u2192 12:49 PM)",
+                "Strongest current ~6:20\u201310:40 AM",
+                "Peak flow overlaps first light",
+                "Windy \u00b7 ENE 17 mph, gusts 24",
+                "Thunderstorms possible",
+                "Wind averaged 17 mph over this window and the 12 h before: expect choppy, murky water"
+              ],
+              "drawbacks": [
+                "choppy, murky water",
+                "windy",
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "In",
+              "time": "1:20 AM",
+              "iso": "2026-11-01T05:20:00+00:00",
+              "value": "0.3 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "8:30 AM",
+              "iso": "2026-11-01T13:30:00+00:00",
+              "value": "1.5 kt"
+            },
+            {
+              "kind": "In",
+              "time": "3:52 PM",
+              "iso": "2026-11-01T20:52:00+00:00",
+              "value": "0.3 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "9:34 PM",
+              "iso": "2026-11-02T02:34:00+00:00",
+              "value": "0.1 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "72\u00b0 \u2013 78\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 16\u201318",
+            "wind_sub": "mph \u00b7 gusts to 26",
+            "rain": "60%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "73\u00b0",
+                "wind": "ENE 16"
+              },
+              {
+                "label": "9a",
+                "temp": "76\u00b0",
+                "wind": "E 17"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "E 17"
+              },
+              {
+                "label": "3p",
+                "temp": "77\u00b0",
+                "wind": "E 18"
+              },
+              {
+                "label": "6p",
+                "temp": "74\u00b0",
+                "wind": "E 18"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "E 17"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible",
+            "Windy \u2014 ENE 17 mph, gusts 26"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:17 AM",
+            "sunrise": "6:42",
+            "sunset": "5:46",
+            "last_light": "6:11 PM"
+          }
+        },
+        {
+          "key": "2026-11-02",
+          "is_today": false,
+          "tab": "Mon",
+          "date_long": "Monday, November 2",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "78\u00b0/69\u00b0",
+          "best": {
+            "rating": "Marginal",
+            "time": "6:18 AM\u20131:47 PM"
+          },
+          "headline": "Choppy, murky water; expect a slow bite.",
+          "summary": "A moderate 1.3 kt outgoing current is running hardest around first light, with the strongest current around 7:05\u201311:40 AM. Expect a breezy ENE wind around 15 mph.",
+          "windows": [
+            {
+              "time": "6:18 AM\u20131:47 PM",
+              "start": "2026-11-02T11:18:21.669762+00:00",
+              "end": "2026-11-02T18:47:00+00:00",
+              "rating": "Marginal",
+              "strength": "Moderate",
+              "size": "1.3 kt",
+              "fastest": [
+                "2026-11-02T12:03:00+00:00",
+                "2026-11-02T16:42:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-02T12:03:00+00:00",
+                "2026-11-02T16:42:00+00:00"
+              ],
+              "facts": [
+                "Moderate outgoing current \u00b7 1.3 kt peak at 9:37 AM (slack 4:29 AM \u2192 1:47 PM)",
+                "Strongest current ~7:05\u201311:40 AM",
+                "Peak flow overlaps first light",
+                "Breezy \u00b7 ENE 15 mph, gusts 21",
+                "Thunderstorms possible",
+                "Wind averaged 15 mph over this window and the 12 h before: expect choppy, murky water"
+              ],
+              "drawbacks": [
+                "choppy, murky water",
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "In",
+              "time": "1:47 AM",
+              "iso": "2026-11-02T06:47:00+00:00",
+              "value": "0.2 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "9:37 AM",
+              "iso": "2026-11-02T14:37:00+00:00",
+              "value": "1.3 kt"
+            },
+            {
+              "kind": "In",
+              "time": "4:38 PM",
+              "iso": "2026-11-02T21:38:00+00:00",
+              "value": "0.2 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "11:27 PM",
+              "iso": "2026-11-03T04:27:00+00:00",
+              "value": "0.4 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "69\u00b0 \u2013 78\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 14\u201315",
+            "wind_sub": "mph \u00b7 gusts to 23",
+            "rain": "65%",
+            "rain_sub": "Max chance, morning",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "70\u00b0",
+                "wind": "ENE 14"
+              },
+              {
+                "label": "9a",
+                "temp": "73\u00b0",
+                "wind": "ENE 15"
+              },
+              {
+                "label": "12p",
+                "temp": "77\u00b0",
+                "wind": "E 15"
+              },
+              {
+                "label": "3p",
+                "temp": "78\u00b0",
+                "wind": "ENE 15"
+              },
+              {
+                "label": "6p",
+                "temp": "76\u00b0",
+                "wind": "ENE 15"
+              },
+              {
+                "label": "9p",
+                "temp": "73\u00b0",
+                "wind": "ENE 15"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:18 AM",
+            "sunrise": "6:43",
+            "sunset": "5:45",
+            "last_light": "6:10 PM"
+          }
+        },
+        {
+          "key": "2026-11-03",
+          "is_today": false,
+          "tab": "Tue",
+          "date_long": "Tuesday, November 3",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "80\u00b0/69\u00b0",
+          "best": {
+            "rating": "Marginal",
+            "time": "6:19 AM\u20132:37 PM"
+          },
+          "headline": "A slow day for moving water.",
+          "summary": "A moderate 1.1 kt outgoing current reaches first light, though its strongest current (~8:20 AM\u201312:40 PM) mostly falls outside it. Expect a breezy ENE wind around 11 mph.",
+          "windows": [
+            {
+              "time": "6:19 AM\u20132:37 PM",
+              "start": "2026-11-03T11:19:01.350130+00:00",
+              "end": "2026-11-03T19:37:00+00:00",
+              "rating": "Marginal",
+              "strength": "Moderate",
+              "size": "1.1 kt",
+              "fastest": [
+                "2026-11-03T13:19:00+00:00",
+                "2026-11-03T17:42:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-03T13:19:00+00:00",
+                "2026-11-03T17:42:00+00:00"
+              ],
+              "facts": [
+                "Moderate outgoing current \u00b7 1.1 kt peak at 10:47 AM (slack 5:51 AM \u2192 2:37 PM)",
+                "Strongest current ~8:20 AM\u201312:40 PM",
+                "Breezy \u00b7 ENE 11 mph, gusts 18",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "peak flow outside first light/sunset",
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "In",
+              "time": "3:25 AM",
+              "iso": "2026-11-03T08:25:00+00:00",
+              "value": "0.1 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "10:47 AM",
+              "iso": "2026-11-03T15:47:00+00:00",
+              "value": "1.1 kt"
+            },
+            {
+              "kind": "In",
+              "time": "4:09 PM",
+              "iso": "2026-11-03T21:09:00+00:00",
+              "value": "0.2 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "69\u00b0 \u2013 80\u00b0",
+            "sky": "Storms possible",
+            "wind": "ENE 8\u201313",
+            "wind_sub": "mph \u00b7 gusts to 18",
+            "rain": "18%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "69\u00b0",
+                "wind": "ENE 12"
+              },
+              {
+                "label": "9a",
+                "temp": "74\u00b0",
+                "wind": "E 13"
+              },
+              {
+                "label": "12p",
+                "temp": "79\u00b0",
+                "wind": "E 10"
+              },
+              {
+                "label": "3p",
+                "temp": "80\u00b0",
+                "wind": "ENE 8"
+              },
+              {
+                "label": "6p",
+                "temp": "77\u00b0",
+                "wind": "ENE 8"
+              },
+              {
+                "label": "9p",
+                "temp": "75\u00b0",
+                "wind": "E 12"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:19 AM",
+            "sunrise": "6:43",
+            "sunset": "5:45",
+            "last_light": "6:09 PM"
+          }
+        },
+        {
+          "key": "2026-11-04",
+          "is_today": false,
+          "tab": "Wed",
+          "date_long": "Wednesday, November 4",
+          "icon": "\u26c8\ufe0f",
+          "high_low": "80\u00b0/70\u00b0",
+          "best": {
+            "rating": "Marginal",
+            "time": "7:27 AM\u20133:18 PM"
+          },
+          "headline": "A slow day for moving water.",
+          "summary": "A moderate 0.9 kt outgoing current reaches first light, though its strongest current (~9:40 AM\u20131:35 PM) mostly falls outside it. Expect a breezy SE wind around 8 mph.",
+          "windows": [
+            {
+              "time": "7:27 AM\u20133:18 PM",
+              "start": "2026-11-04T12:27:00+00:00",
+              "end": "2026-11-04T20:18:00+00:00",
+              "rating": "Marginal",
+              "strength": "Moderate",
+              "size": "0.9 kt",
+              "fastest": [
+                "2026-11-04T14:39:00+00:00",
+                "2026-11-04T18:34:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-04T14:39:00+00:00",
+                "2026-11-04T18:34:30+00:00"
+              ],
+              "facts": [
+                "Moderate outgoing current \u00b7 0.9 kt peak at 11:51 AM (slack 7:27 AM \u2192 3:18 PM)",
+                "Strongest current ~9:40 AM\u20131:35 PM",
+                "Breezy \u00b7 SE 8 mph, gusts 13",
+                "Thunderstorms possible"
+              ],
+              "drawbacks": [
+                "peak flow outside first light/sunset",
+                "storms"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "12:17 AM",
+              "iso": "2026-11-04T05:17:00+00:00",
+              "value": "0.7 kt"
+            },
+            {
+              "kind": "In",
+              "time": "4:57 AM",
+              "iso": "2026-11-04T09:57:00+00:00",
+              "value": "0.2 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "11:51 AM",
+              "iso": "2026-11-04T16:51:00+00:00",
+              "value": "0.9 kt"
+            },
+            {
+              "kind": "In",
+              "time": "4:35 PM",
+              "iso": "2026-11-04T21:35:00+00:00",
+              "value": "0.2 kt"
+            },
+            {
+              "kind": "In",
+              "time": "6:03 PM",
+              "iso": "2026-11-04T23:03:00+00:00",
+              "value": "0.1 kt"
+            },
+            {
+              "kind": "In",
+              "time": "7:16 PM",
+              "iso": "2026-11-05T00:16:00+00:00",
+              "value": "0.1 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "70\u00b0 \u2013 80\u00b0",
+            "sky": "Storms possible",
+            "wind": "SSE 7\u20139",
+            "wind_sub": "mph \u00b7 gusts to 13",
+            "rain": "15%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "70\u00b0",
+                "wind": "E 9"
+              },
+              {
+                "label": "9a",
+                "temp": "74\u00b0",
+                "wind": "ESE 9"
+              },
+              {
+                "label": "12p",
+                "temp": "79\u00b0",
+                "wind": "SSE 8"
+              },
+              {
+                "label": "3p",
+                "temp": "80\u00b0",
+                "wind": "SSW 8"
+              },
+              {
+                "label": "6p",
+                "temp": "78\u00b0",
+                "wind": "SE 7"
+              },
+              {
+                "label": "9p",
+                "temp": "74\u00b0",
+                "wind": "ESE 6"
+              }
+            ]
+          },
+          "hazards": [
+            "Thunderstorms possible"
+          ],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:19 AM",
+            "sunrise": "6:44",
+            "sunset": "5:44",
+            "last_light": "6:09 PM"
+          }
+        }
+      ],
+      "sources": [
+        "Currents: NOAA JOP1101 Johns Pass Entrance predictions",
+        "Weather: National Weather Service (updated 3:01 AM)",
+        "Observations: NOAA 8726724 Clearwater Beach",
+        "Red tide: FWC Karenia brevis samples"
+      ],
+      "station_name": "Clearwater Beach",
+      "app_url": "https://blakezurman.github.io/inshore-briefing-site/"
+    }
+  ]
+}
