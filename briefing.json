@@ -1,0 +1,2671 @@
+{
+  "schema_version": 3,
+  "date_long": "Saturday, November 7",
+  "generated": "2026-11-07T16:01:03.632628+00:00",
+  "generated_local": "11:01 AM EST",
+  "schedule_utc": [
+    "01:00",
+    "10:40",
+    "13:00",
+    "16:00",
+    "19:00",
+    "22:00"
+  ],
+  "spots": [
+    {
+      "schema_version": 3,
+      "spot_id": "dock",
+      "short_name": "Dock",
+      "is_pass": false,
+      "tides_label": "Depth at your dock",
+      "chart_note": "<b>Blue</b> = falling water; darker blue = fastest water in a Prime, Great or Good window. Heights are depth at the dock. Dotted lines = 1 ft (getting shallow) and 0.5 ft (too shallow). <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.",
+      "rules_text": "Each window starts at 100 points: Prime 90+, Great 75+, Good 60+, Fair 40+, Poor below. Points lost: fall 1.5\u20132 ft \u221210, 1\u20131.5 ft \u221220, under 1 ft \u221245; under 1 ft deep during the fastest water \u221225, only after it \u221210; fastest water misses first light and sunset \u221210 (midday \u221220); wind 9\u201312 mph \u22125, 13\u201315 mph \u221210, over 15 mph \u221220; SSW\u2013WSW wind \u221210 more; gusts 20+ \u22125; rain chance 20%+ \u22125, 50%+ \u221210; storms \u221220; cool water (under 60\u00b0) \u221210; choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) \u221210. Prime also needs a fall of 2 ft or more, fastest water at first light or sunset, at least 1 ft deep, wind 8 mph or less and not SSW\u2013WSW, rain under 20%, no storms, clear water. Red tide nearby or cold water (under 55\u00b0) is Skip. Heights are depth at the dock; a window ends once it drops below 0.5 ft. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates.",
+      "date": "2026-11-07",
+      "date_long": "Saturday, November 7",
+      "location": "Indian Shores dock",
+      "generated": "2026-11-07T16:01:03.632628+00:00",
+      "generated_local": "11:01 AM EST",
+      "headline": "This evening looks great.",
+      "summary": "A moderate 1.3 ft falling tide runs through sunset, with the fastest water around 2:10\u20134:50 PM. Expect a breezy NNW wind around 10 mph.",
+      "problems": [],
+      "windows": [
+        {
+          "time": "12:51\u20136:07 PM",
+          "start": "2026-11-07T17:51:00+00:00",
+          "end": "2026-11-07T23:07:39.884872+00:00",
+          "rating": "Great",
+          "score": 75,
+          "score_text": "Score 75: \u221220 small 1.3 ft fall, \u22125 10 mph wind",
+          "losses": [
+            {
+              "what": "small 1.3 ft fall",
+              "points": 20
+            },
+            {
+              "what": "10 mph wind",
+              "points": 5
+            }
+          ],
+          "strength": "Moderate",
+          "size": "1.3 ft",
+          "fastest": [
+            "2026-11-07T19:11:00+00:00",
+            "2026-11-07T21:51:00+00:00"
+          ],
+          "fastest_full": [
+            "2026-11-07T19:11:00+00:00",
+            "2026-11-07T21:51:00+00:00"
+          ],
+          "facts": [
+            "Moderate fall \u00b7 1.3 ft high-to-low (12:51 PM \u2192 6:11 PM)",
+            "Fastest water ~2:10\u20134:50 PM",
+            "Peak flow overlaps sunset",
+            "Breezy \u00b7 NNW 10 mph, gusts 17"
+          ],
+          "drawbacks": [
+            "small 1.3 ft fall",
+            "10 mph wind"
+          ]
+        }
+      ],
+      "tides": [
+        {
+          "kind": "Low",
+          "time": "6:23 AM",
+          "iso": "2026-11-07T11:23:00+00:00",
+          "height_ft": 0.15,
+          "value": "0.1 ft"
+        },
+        {
+          "kind": "High",
+          "time": "12:51 PM",
+          "iso": "2026-11-07T17:51:00+00:00",
+          "height_ft": 2.33,
+          "value": "2.3 ft"
+        },
+        {
+          "kind": "Low",
+          "time": "6:11 PM",
+          "iso": "2026-11-07T23:11:00+00:00",
+          "height_ft": 1.04,
+          "value": "1.0 ft"
+        },
+        {
+          "kind": "High",
+          "time": "11:39 PM",
+          "iso": "2026-11-08T04:39:00+00:00",
+          "height_ft": 2.89,
+          "value": "2.9 ft"
+        }
+      ],
+      "has_chart": true,
+      "water_level": "Water is running +0.8 ft from prediction at Clearwater Beach (10:54 AM). Today's depths include +0.8 ft (the last day's average); later days +0.7 ft (last 30 days).",
+      "weather": {
+        "temp": "70\u00b0 \u2013 79\u00b0",
+        "sky": "Mostly sunny",
+        "wind": "N 7\u201312",
+        "wind_sub": "mph \u00b7 gusts to 17",
+        "rain": "1%",
+        "rain_sub": "Max chance, afternoon",
+        "blocks": [
+          {
+            "label": "6a",
+            "temp": "71\u00b0",
+            "wind": "N 6"
+          },
+          {
+            "label": "9a",
+            "temp": "75\u00b0",
+            "wind": "NNE 7"
+          },
+          {
+            "label": "12p",
+            "temp": "78\u00b0",
+            "wind": "N 8"
+          },
+          {
+            "label": "3p",
+            "temp": "78\u00b0",
+            "wind": "NNW 12"
+          },
+          {
+            "label": "6p",
+            "temp": "74\u00b0",
+            "wind": "N 10"
+          },
+          {
+            "label": "9p",
+            "temp": "72\u00b0",
+            "wind": "N 9"
+          }
+        ]
+      },
+      "weather_source": "National Weather Service",
+      "weather_fallback": null,
+      "sun": {
+        "first_light": "6:22 AM",
+        "sunrise": "6:46",
+        "sunset": "5:42",
+        "last_light": "6:07 PM"
+      },
+      "water_temp": "77\u00b0",
+      "red_tide": {
+        "text": "Red tide: no FWC samples within 20 km over the last 8 days.",
+        "warn": false
+      },
+      "alerts": [],
+      "marine": "Bay and inland waters: a moderate chop (this afternoon)",
+      "upcoming": [
+        {
+          "date": "2026-11-08",
+          "weekday": "Sunday",
+          "sky": "Sunny \u00b7 78\u00b0/64\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "moderate fall 3:42\u20136:07 PM",
+              "rating": "Great",
+              "score": 80,
+              "why": "small 1.1 ft fall"
+            }
+          ],
+          "wind": "Wind N 6 mph, gusts 13 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-09",
+          "weekday": "Monday",
+          "sky": "Mostly sunny \u00b7 79\u00b0/64\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "moderate fall 3:41\u20136:06 PM",
+              "rating": "Great",
+              "score": 80,
+              "why": "small 1.0 ft fall"
+            }
+          ],
+          "wind": "Wind NE 7 mph, gusts 12 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-10",
+          "weekday": "Tuesday",
+          "sky": "Mostly sunny \u00b7 79\u00b0/65\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "weak fall 3:41\u20136:06 PM",
+              "rating": "Fair",
+              "score": 55,
+              "why": "weak 0.8 ft fall"
+            }
+          ],
+          "wind": "Wind ENE 5 mph, gusts 12 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-11",
+          "weekday": "Wednesday",
+          "sky": "Partly cloudy \u00b7 76\u00b0/67\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "rising water",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "weak fall 3:40\u20136:05 PM",
+              "rating": "Fair",
+              "score": 55,
+              "why": "weak 0.7 ft fall"
+            }
+          ],
+          "wind": "Wind N 6 mph, gusts 9 \u00b7 Rain 8%",
+          "hazards": []
+        }
+      ],
+      "days": [
+        {
+          "key": "2026-11-07",
+          "is_today": true,
+          "tab": "Today",
+          "date_long": "Saturday, November 7",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "79\u00b0/70\u00b0",
+          "best": {
+            "rating": "Great",
+            "score": 75,
+            "time": "12:51\u20136:07 PM"
+          },
+          "headline": "This evening looks great.",
+          "summary": "A moderate 1.3 ft falling tide runs through sunset, with the fastest water around 2:10\u20134:50 PM. Expect a breezy NNW wind around 10 mph.",
+          "windows": [
+            {
+              "time": "12:51\u20136:07 PM",
+              "start": "2026-11-07T17:51:00+00:00",
+              "end": "2026-11-07T23:07:39.884872+00:00",
+              "rating": "Great",
+              "score": 75,
+              "score_text": "Score 75: \u221220 small 1.3 ft fall, \u22125 10 mph wind",
+              "losses": [
+                {
+                  "what": "small 1.3 ft fall",
+                  "points": 20
+                },
+                {
+                  "what": "10 mph wind",
+                  "points": 5
+                }
+              ],
+              "strength": "Moderate",
+              "size": "1.3 ft",
+              "fastest": [
+                "2026-11-07T19:11:00+00:00",
+                "2026-11-07T21:51:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-07T19:11:00+00:00",
+                "2026-11-07T21:51:00+00:00"
+              ],
+              "facts": [
+                "Moderate fall \u00b7 1.3 ft high-to-low (12:51 PM \u2192 6:11 PM)",
+                "Fastest water ~2:10\u20134:50 PM",
+                "Peak flow overlaps sunset",
+                "Breezy \u00b7 NNW 10 mph, gusts 17"
+              ],
+              "drawbacks": [
+                "small 1.3 ft fall",
+                "10 mph wind"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Low",
+              "time": "6:23 AM",
+              "iso": "2026-11-07T11:23:00+00:00",
+              "height_ft": 0.15,
+              "value": "0.1 ft"
+            },
+            {
+              "kind": "High",
+              "time": "12:51 PM",
+              "iso": "2026-11-07T17:51:00+00:00",
+              "height_ft": 2.33,
+              "value": "2.3 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "6:11 PM",
+              "iso": "2026-11-07T23:11:00+00:00",
+              "height_ft": 1.04,
+              "value": "1.0 ft"
+            },
+            {
+              "kind": "High",
+              "time": "11:39 PM",
+              "iso": "2026-11-08T04:39:00+00:00",
+              "height_ft": 2.89,
+              "value": "2.9 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "70\u00b0 \u2013 79\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "N 7\u201312",
+            "wind_sub": "mph \u00b7 gusts to 17",
+            "rain": "1%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "71\u00b0",
+                "wind": "N 6"
+              },
+              {
+                "label": "9a",
+                "temp": "75\u00b0",
+                "wind": "NNE 7"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "N 8"
+              },
+              {
+                "label": "3p",
+                "temp": "78\u00b0",
+                "wind": "NNW 12"
+              },
+              {
+                "label": "6p",
+                "temp": "74\u00b0",
+                "wind": "N 10"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "N 9"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:22 AM",
+            "sunrise": "6:46",
+            "sunset": "5:42",
+            "last_light": "6:07 PM"
+          }
+        },
+        {
+          "key": "2026-11-08",
+          "is_today": false,
+          "tab": "Sun",
+          "date_long": "Sunday, November 8",
+          "icon": "\u2600\ufe0f",
+          "high_low": "78\u00b0/64\u00b0",
+          "best": {
+            "rating": "Great",
+            "score": 80,
+            "time": "1:30\u20136:07 PM"
+          },
+          "headline": "Sunday evening looks great.",
+          "summary": "A moderate 1.1 ft falling tide runs through sunset, with the fastest water around 2:50\u20135:20 PM. Expect a light NNW wind around 7 mph.",
+          "windows": [
+            {
+              "time": "1:30\u20136:07 PM",
+              "start": "2026-11-08T18:30:00+00:00",
+              "end": "2026-11-08T23:07:06.845931+00:00",
+              "rating": "Great",
+              "score": 80,
+              "score_text": "Score 80: \u221220 small 1.1 ft fall",
+              "losses": [
+                {
+                  "what": "small 1.1 ft fall",
+                  "points": 20
+                }
+              ],
+              "strength": "Moderate",
+              "size": "1.1 ft",
+              "fastest": [
+                "2026-11-08T19:47:30+00:00",
+                "2026-11-08T22:22:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-08T19:47:30+00:00",
+                "2026-11-08T22:22:30+00:00"
+              ],
+              "facts": [
+                "Moderate fall \u00b7 1.1 ft high-to-low (1:30 PM \u2192 6:40 PM)",
+                "Fastest water ~2:50\u20135:20 PM",
+                "Peak flow overlaps sunset",
+                "Calm \u00b7 NNW 7 mph, gusts 13"
+              ],
+              "drawbacks": [
+                "small 1.1 ft fall"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Low",
+              "time": "7:02 AM",
+              "iso": "2026-11-08T12:02:00+00:00",
+              "height_ft": -0.14,
+              "value": "-0.1 ft"
+            },
+            {
+              "kind": "High",
+              "time": "1:30 PM",
+              "iso": "2026-11-08T18:30:00+00:00",
+              "height_ft": 2.11,
+              "value": "2.1 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "6:40 PM",
+              "iso": "2026-11-08T23:40:00+00:00",
+              "height_ft": 0.99,
+              "value": "1.0 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "64\u00b0 \u2013 78\u00b0",
+            "sky": "Sunny",
+            "wind": "N 5\u20138",
+            "wind_sub": "mph \u00b7 gusts to 13",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "64\u00b0",
+                "wind": "NNE 6"
+              },
+              {
+                "label": "9a",
+                "temp": "70\u00b0",
+                "wind": "NE 6"
+              },
+              {
+                "label": "12p",
+                "temp": "77\u00b0",
+                "wind": "N 5"
+              },
+              {
+                "label": "3p",
+                "temp": "77\u00b0",
+                "wind": "NNW 7"
+              },
+              {
+                "label": "6p",
+                "temp": "73\u00b0",
+                "wind": "NNW 8"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "N 7"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:22 AM",
+            "sunrise": "6:47",
+            "sunset": "5:42",
+            "last_light": "6:07 PM"
+          }
+        },
+        {
+          "key": "2026-11-09",
+          "is_today": false,
+          "tab": "Mon",
+          "date_long": "Monday, November 9",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "79\u00b0/64\u00b0",
+          "best": {
+            "rating": "Great",
+            "score": 80,
+            "time": "2:06\u20136:06 PM"
+          },
+          "headline": "Monday evening looks great.",
+          "summary": "A moderate 1.0 ft falling tide runs through sunset, with the fastest water around 3:20\u20135:50 PM. Expect a light N wind around 7 mph.",
+          "windows": [
+            {
+              "time": "2:06\u20136:06 PM",
+              "start": "2026-11-09T19:06:00+00:00",
+              "end": "2026-11-09T23:06:35.203583+00:00",
+              "rating": "Great",
+              "score": 80,
+              "score_text": "Score 80: \u221220 small 1.0 ft fall",
+              "losses": [
+                {
+                  "what": "small 1.0 ft fall",
+                  "points": 20
+                }
+              ],
+              "strength": "Moderate",
+              "size": "1.0 ft",
+              "fastest": [
+                "2026-11-09T20:20:45+00:00",
+                "2026-11-09T22:50:15+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-09T20:20:45+00:00",
+                "2026-11-09T22:50:15+00:00"
+              ],
+              "facts": [
+                "Moderate fall \u00b7 1.0 ft high-to-low (2:06 PM \u2192 7:05 PM)",
+                "Fastest water ~3:20\u20135:50 PM",
+                "Peak flow overlaps sunset",
+                "Calm \u00b7 N 7 mph, gusts 12"
+              ],
+              "drawbacks": [
+                "small 1.0 ft fall"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "High",
+              "time": "12:05 AM",
+              "iso": "2026-11-09T05:05:00+00:00",
+              "height_ft": 2.84,
+              "value": "2.8 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "7:39 AM",
+              "iso": "2026-11-09T12:39:00+00:00",
+              "height_ft": -0.23,
+              "value": "-0.2 ft"
+            },
+            {
+              "kind": "High",
+              "time": "2:06 PM",
+              "iso": "2026-11-09T19:06:00+00:00",
+              "height_ft": 1.99,
+              "value": "2.0 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "7:05 PM",
+              "iso": "2026-11-10T00:05:00+00:00",
+              "height_ft": 1.03,
+              "value": "1.0 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "64\u00b0 \u2013 79\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "NE 6\u20137",
+            "wind_sub": "mph \u00b7 gusts to 12",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "64\u00b0",
+                "wind": "ENE 7"
+              },
+              {
+                "label": "9a",
+                "temp": "71\u00b0",
+                "wind": "ENE 7"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "ENE 6"
+              },
+              {
+                "label": "3p",
+                "temp": "79\u00b0",
+                "wind": "N 7"
+              },
+              {
+                "label": "6p",
+                "temp": "75\u00b0",
+                "wind": "N 7"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "N 7"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:23 AM",
+            "sunrise": "6:48",
+            "sunset": "5:41",
+            "last_light": "6:06 PM"
+          }
+        },
+        {
+          "key": "2026-11-10",
+          "is_today": false,
+          "tab": "Tue",
+          "date_long": "Tuesday, November 10",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "79\u00b0/65\u00b0",
+          "best": {
+            "rating": "Fair",
+            "score": 55,
+            "time": "2:44\u20136:06 PM"
+          },
+          "headline": "Tuesday evening is fair at best.",
+          "summary": "A weak 0.8 ft falling tide runs through sunset, with the fastest water around 3:55\u20136:05 PM. Expect a light NNW wind around 5 mph.",
+          "windows": [
+            {
+              "time": "2:44\u20136:06 PM",
+              "start": "2026-11-10T19:44:00+00:00",
+              "end": "2026-11-10T23:06:04.975307+00:00",
+              "rating": "Fair",
+              "score": 55,
+              "score_text": "Score 55: \u221245 weak 0.8 ft fall",
+              "losses": [
+                {
+                  "what": "weak 0.8 ft fall",
+                  "points": 45
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.8 ft",
+              "fastest": [
+                "2026-11-10T20:54:45+00:00",
+                "2026-11-10T23:06:04.975307+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-10T20:54:45+00:00",
+                "2026-11-10T23:16:15+00:00"
+              ],
+              "facts": [
+                "Weak fall \u00b7 0.8 ft high-to-low (2:44 PM \u2192 7:27 PM)",
+                "Fastest water ~3:55\u20136:05 PM",
+                "Peak flow overlaps sunset",
+                "Calm \u00b7 NNW 5 mph, gusts 8"
+              ],
+              "drawbacks": [
+                "weak 0.8 ft fall"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "High",
+              "time": "12:33 AM",
+              "iso": "2026-11-10T05:33:00+00:00",
+              "height_ft": 2.85,
+              "value": "2.9 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "8:16 AM",
+              "iso": "2026-11-10T13:16:00+00:00",
+              "height_ft": -0.25,
+              "value": "-0.2 ft"
+            },
+            {
+              "kind": "High",
+              "time": "2:44 PM",
+              "iso": "2026-11-10T19:44:00+00:00",
+              "height_ft": 1.87,
+              "value": "1.9 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "7:27 PM",
+              "iso": "2026-11-11T00:27:00+00:00",
+              "height_ft": 1.06,
+              "value": "1.1 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "65\u00b0 \u2013 79\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "ENE 3\u20137",
+            "wind_sub": "mph \u00b7 gusts to 12",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "65\u00b0",
+                "wind": "E 6"
+              },
+              {
+                "label": "9a",
+                "temp": "71\u00b0",
+                "wind": "E 7"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "ESE 5"
+              },
+              {
+                "label": "3p",
+                "temp": "79\u00b0",
+                "wind": "N 5"
+              },
+              {
+                "label": "6p",
+                "temp": "74\u00b0",
+                "wind": "NNW 6"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "N 6"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:24 AM",
+            "sunrise": "6:49",
+            "sunset": "5:41",
+            "last_light": "6:06 PM"
+          }
+        },
+        {
+          "key": "2026-11-11",
+          "is_today": false,
+          "tab": "Wed",
+          "date_long": "Wednesday, November 11",
+          "icon": "\u26c5",
+          "high_low": "76\u00b0/67\u00b0",
+          "best": {
+            "rating": "Fair",
+            "score": 55,
+            "time": "3:27\u20136:05 PM"
+          },
+          "headline": "Wednesday evening is fair at best.",
+          "summary": "A weak 0.7 ft falling tide runs through sunset, with the fastest water around 4:30\u20136:05 PM. Expect a light NW wind around 6 mph.",
+          "windows": [
+            {
+              "time": "3:27\u20136:05 PM",
+              "start": "2026-11-11T20:27:00+00:00",
+              "end": "2026-11-11T23:05:36.177764+00:00",
+              "rating": "Fair",
+              "score": 55,
+              "score_text": "Score 55: \u221245 weak 0.7 ft fall",
+              "losses": [
+                {
+                  "what": "weak 0.7 ft fall",
+                  "points": 45
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.7 ft",
+              "fastest": [
+                "2026-11-11T21:32:30+00:00",
+                "2026-11-11T23:05:36.177764+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-11T21:32:30+00:00",
+                "2026-11-11T23:43:30+00:00"
+              ],
+              "facts": [
+                "Weak fall \u00b7 0.7 ft high-to-low (3:27 PM \u2192 7:49 PM)",
+                "Fastest water ~4:30\u20136:05 PM",
+                "Peak flow overlaps sunset",
+                "Calm \u00b7 NW 6 mph, gusts 9"
+              ],
+              "drawbacks": [
+                "weak 0.7 ft fall"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "High",
+              "time": "1:02 AM",
+              "iso": "2026-11-11T06:02:00+00:00",
+              "height_ft": 2.83,
+              "value": "2.8 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "8:53 AM",
+              "iso": "2026-11-11T13:53:00+00:00",
+              "height_ft": -0.21,
+              "value": "-0.2 ft"
+            },
+            {
+              "kind": "High",
+              "time": "3:27 PM",
+              "iso": "2026-11-11T20:27:00+00:00",
+              "height_ft": 1.77,
+              "value": "1.8 ft"
+            },
+            {
+              "kind": "Low",
+              "time": "7:49 PM",
+              "iso": "2026-11-12T00:49:00+00:00",
+              "height_ft": 1.07,
+              "value": "1.1 ft"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "67\u00b0 \u2013 76\u00b0",
+            "sky": "Partly cloudy",
+            "wind": "N 5\u20137",
+            "wind_sub": "mph \u00b7 gusts to 9",
+            "rain": "8%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "67\u00b0",
+                "wind": "ENE 5"
+              },
+              {
+                "label": "9a",
+                "temp": "72\u00b0",
+                "wind": "ENE 5"
+              },
+              {
+                "label": "12p",
+                "temp": "75\u00b0",
+                "wind": "NNW 6"
+              },
+              {
+                "label": "3p",
+                "temp": "75\u00b0",
+                "wind": "NW 7"
+              },
+              {
+                "label": "6p",
+                "temp": "73\u00b0",
+                "wind": "NNW 6"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "NNW 3"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:24 AM",
+            "sunrise": "6:49",
+            "sunset": "5:40",
+            "last_light": "6:05 PM"
+          }
+        }
+      ],
+      "sources": [
+        "Tides: NOAA 8726625 Indian Rocks Beach (inside) predictions, shifted +40 min for the dock, shown as depth at the dock (bottom 0.7 ft above MLLW, plus how far Clearwater Beach runs from prediction)",
+        "Weather: National Weather Service (updated 2:16 AM)",
+        "Observations: NOAA 8726724 Clearwater Beach",
+        "Red tide: FWC Karenia brevis samples"
+      ],
+      "station_name": "Clearwater Beach",
+      "app_url": "https://blakezurman.github.io/inshore-briefing-site/"
+    },
+    {
+      "schema_version": 3,
+      "spot_id": "clearwater-pass",
+      "short_name": "Clearwater",
+      "is_pass": true,
+      "tides_label": "Current at Clearwater Pass, 0.2 mi NE of Sand Key",
+      "chart_note": "<b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.",
+      "rules_text": "Each window starts at 100 points: Prime 90+, Great 75+, Good 60+, Fair 40+, Poor below. Points lost: peak outgoing current 1\u20131.5 kt \u221210, 0.75\u20131 kt \u221220, under 0.75 kt \u221245; strongest current misses first light and sunset \u221210 (midday \u221220); wind 9\u201312 mph \u221215, 13\u201315 mph \u221230, over 15 mph \u221245; SSW\u2013WNW wind \u221215 more; gusts 20+ \u22125; rain chance 20%+ \u22125, 50%+ \u221210; storms \u221220; cool water (under 60\u00b0) \u221210. Prime also needs a peak current of 1.5 kt or more, strongest current at first light or sunset, wind 8 mph or less and not SSW\u2013WNW, rain under 20%, no storms, clear water. Red tide nearby, cold water (under 55\u00b0) or choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) is Skip. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates.",
+      "date": "2026-11-07",
+      "date_long": "Saturday, November 7",
+      "location": "Clearwater Pass",
+      "generated": "2026-11-07T16:01:03.632628+00:00",
+      "generated_local": "11:01 AM EST",
+      "headline": "A slow day for moving water.",
+      "summary": "A weak 0.4 kt outgoing current runs 11:55 AM\u20133:55 PM, with the strongest current around 1:05\u20133:05 PM. Expect a breezy NNW wind around 9 mph.",
+      "problems": [],
+      "windows": [
+        {
+          "time": "11:55 AM\u20133:55 PM",
+          "start": "2026-11-07T16:55:00+00:00",
+          "end": "2026-11-07T20:55:00+00:00",
+          "rating": "Poor",
+          "score": 20,
+          "score_text": "Score 20: \u221245 weak 0.4 kt outgoing current, \u221220 midday water, \u221215 9 mph wind",
+          "losses": [
+            {
+              "what": "weak 0.4 kt outgoing current",
+              "points": 45
+            },
+            {
+              "what": "midday water",
+              "points": 20
+            },
+            {
+              "what": "9 mph wind",
+              "points": 15
+            }
+          ],
+          "strength": "Weak",
+          "size": "0.4 kt",
+          "fastest": [
+            "2026-11-07T18:07:00+00:00",
+            "2026-11-07T20:07:00+00:00"
+          ],
+          "fastest_full": [
+            "2026-11-07T18:07:00+00:00",
+            "2026-11-07T20:07:00+00:00"
+          ],
+          "facts": [
+            "Weak outgoing current \u00b7 0.4 kt peak at 2:19 PM (slack 11:55 AM \u2192 3:55 PM)",
+            "Strongest current ~1:05\u20133:05 PM",
+            "Midday \u2014 outside first light and sunset",
+            "Breezy \u00b7 NNW 9 mph, gusts 16"
+          ],
+          "drawbacks": [
+            "weak 0.4 kt outgoing current",
+            "midday water",
+            "9 mph wind"
+          ]
+        }
+      ],
+      "tides": [
+        {
+          "kind": "Out",
+          "time": "1:44 AM",
+          "iso": "2026-11-07T06:44:00+00:00",
+          "value": "1.5 kt"
+        },
+        {
+          "kind": "In",
+          "time": "7:52 AM",
+          "iso": "2026-11-07T12:52:00+00:00",
+          "value": "1.7 kt"
+        },
+        {
+          "kind": "Out",
+          "time": "2:19 PM",
+          "iso": "2026-11-07T19:19:00+00:00",
+          "value": "0.4 kt"
+        },
+        {
+          "kind": "In",
+          "time": "6:58 PM",
+          "iso": "2026-11-07T23:58:00+00:00",
+          "value": "1.3 kt"
+        }
+      ],
+      "has_chart": true,
+      "water_level": "Water is running 0.8 ft above prediction at Clearwater Beach (10:54 AM). Water is being held in; lows may not drain as far as shown.",
+      "weather": {
+        "temp": "69\u00b0 \u2013 77\u00b0",
+        "sky": "Mostly sunny",
+        "wind": "N 5\u201310",
+        "wind_sub": "mph \u00b7 gusts to 16",
+        "rain": "1%",
+        "rain_sub": "Max chance, afternoon",
+        "blocks": [
+          {
+            "label": "6a",
+            "temp": "70\u00b0",
+            "wind": "N 5"
+          },
+          {
+            "label": "9a",
+            "temp": "73\u00b0",
+            "wind": "NNE 6"
+          },
+          {
+            "label": "12p",
+            "temp": "76\u00b0",
+            "wind": "N 8"
+          },
+          {
+            "label": "3p",
+            "temp": "75\u00b0",
+            "wind": "NNW 10"
+          },
+          {
+            "label": "6p",
+            "temp": "72\u00b0",
+            "wind": "N 8"
+          },
+          {
+            "label": "9p",
+            "temp": "71\u00b0",
+            "wind": "N 7"
+          }
+        ]
+      },
+      "weather_source": "National Weather Service",
+      "weather_fallback": null,
+      "sun": {
+        "first_light": "6:22 AM",
+        "sunrise": "6:47",
+        "sunset": "5:42",
+        "last_light": "6:07 PM"
+      },
+      "water_temp": "77\u00b0",
+      "red_tide": {
+        "text": "Red tide: no FWC samples within 20 km over the last 8 days.",
+        "warn": false
+      },
+      "alerts": [],
+      "marine": "Bay and inland waters: a moderate chop (this afternoon)",
+      "upcoming": [
+        {
+          "date": "2026-11-08",
+          "weekday": "Sunday",
+          "sky": "Mostly sunny \u00b7 76\u00b0/62\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind N 5 mph, gusts 13 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-09",
+          "weekday": "Monday",
+          "sky": "Mostly sunny \u00b7 78\u00b0/63\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "weak outgoing current 3:41\u20134:19 PM",
+              "rating": "Fair",
+              "score": 45,
+              "why": "weak 0.2 kt outgoing current, strongest current outside first light/sunset"
+            }
+          ],
+          "wind": "Wind NE 6 mph, gusts 13 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-10",
+          "weekday": "Tuesday",
+          "sky": "Mostly sunny \u00b7 77\u00b0/63\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind ENE 5 mph, gusts 10 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-11",
+          "weekday": "Wednesday",
+          "sky": "Partly cloudy \u00b7 76\u00b0/67\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "strong outgoing current 6:24\u20137:25 AM",
+              "rating": "Great",
+              "score": 90,
+              "why": "strongest current outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind N 6 mph, gusts 10 \u00b7 Rain 7%",
+          "hazards": []
+        }
+      ],
+      "days": [
+        {
+          "key": "2026-11-07",
+          "is_today": true,
+          "tab": "Today",
+          "date_long": "Saturday, November 7",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "77\u00b0/69\u00b0",
+          "best": {
+            "rating": "Poor",
+            "score": 20,
+            "time": "11:55 AM\u20133:55 PM"
+          },
+          "headline": "A slow day for moving water.",
+          "summary": "A weak 0.4 kt outgoing current runs 11:55 AM\u20133:55 PM, with the strongest current around 1:05\u20133:05 PM. Expect a breezy NNW wind around 9 mph.",
+          "windows": [
+            {
+              "time": "11:55 AM\u20133:55 PM",
+              "start": "2026-11-07T16:55:00+00:00",
+              "end": "2026-11-07T20:55:00+00:00",
+              "rating": "Poor",
+              "score": 20,
+              "score_text": "Score 20: \u221245 weak 0.4 kt outgoing current, \u221220 midday water, \u221215 9 mph wind",
+              "losses": [
+                {
+                  "what": "weak 0.4 kt outgoing current",
+                  "points": 45
+                },
+                {
+                  "what": "midday water",
+                  "points": 20
+                },
+                {
+                  "what": "9 mph wind",
+                  "points": 15
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.4 kt",
+              "fastest": [
+                "2026-11-07T18:07:00+00:00",
+                "2026-11-07T20:07:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-07T18:07:00+00:00",
+                "2026-11-07T20:07:00+00:00"
+              ],
+              "facts": [
+                "Weak outgoing current \u00b7 0.4 kt peak at 2:19 PM (slack 11:55 AM \u2192 3:55 PM)",
+                "Strongest current ~1:05\u20133:05 PM",
+                "Midday \u2014 outside first light and sunset",
+                "Breezy \u00b7 NNW 9 mph, gusts 16"
+              ],
+              "drawbacks": [
+                "weak 0.4 kt outgoing current",
+                "midday water",
+                "9 mph wind"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "1:44 AM",
+              "iso": "2026-11-07T06:44:00+00:00",
+              "value": "1.5 kt"
+            },
+            {
+              "kind": "In",
+              "time": "7:52 AM",
+              "iso": "2026-11-07T12:52:00+00:00",
+              "value": "1.7 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "2:19 PM",
+              "iso": "2026-11-07T19:19:00+00:00",
+              "value": "0.4 kt"
+            },
+            {
+              "kind": "In",
+              "time": "6:58 PM",
+              "iso": "2026-11-07T23:58:00+00:00",
+              "value": "1.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "69\u00b0 \u2013 77\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "N 5\u201310",
+            "wind_sub": "mph \u00b7 gusts to 16",
+            "rain": "1%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "70\u00b0",
+                "wind": "N 5"
+              },
+              {
+                "label": "9a",
+                "temp": "73\u00b0",
+                "wind": "NNE 6"
+              },
+              {
+                "label": "12p",
+                "temp": "76\u00b0",
+                "wind": "N 8"
+              },
+              {
+                "label": "3p",
+                "temp": "75\u00b0",
+                "wind": "NNW 10"
+              },
+              {
+                "label": "6p",
+                "temp": "72\u00b0",
+                "wind": "N 8"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "N 7"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:22 AM",
+            "sunrise": "6:47",
+            "sunset": "5:42",
+            "last_light": "6:07 PM"
+          }
+        },
+        {
+          "key": "2026-11-08",
+          "is_today": false,
+          "tab": "Sun",
+          "date_long": "Sunday, November 8",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "76\u00b0/62\u00b0",
+          "best": {
+            "rating": "Poor",
+            "score": 35,
+            "time": "12:48\u20134:07 PM"
+          },
+          "headline": "A slow day for moving water.",
+          "summary": "A weak 0.3 kt outgoing current runs 12:48\u20134:07 PM, with the strongest current around 1:50\u20133:30 PM. Expect a light NNW wind around 6 mph.",
+          "windows": [
+            {
+              "time": "12:48\u20134:07 PM",
+              "start": "2026-11-08T17:48:00+00:00",
+              "end": "2026-11-08T21:07:00+00:00",
+              "rating": "Poor",
+              "score": 35,
+              "score_text": "Score 35: \u221245 weak 0.3 kt outgoing current, \u221220 midday water",
+              "losses": [
+                {
+                  "what": "weak 0.3 kt outgoing current",
+                  "points": 45
+                },
+                {
+                  "what": "midday water",
+                  "points": 20
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.3 kt",
+              "fastest": [
+                "2026-11-08T18:51:00+00:00",
+                "2026-11-08T20:30:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-08T18:51:00+00:00",
+                "2026-11-08T20:30:30+00:00"
+              ],
+              "facts": [
+                "Weak outgoing current \u00b7 0.3 kt peak at 2:54 PM (slack 12:48 PM \u2192 4:07 PM)",
+                "Strongest current ~1:50\u20133:30 PM",
+                "Midday \u2014 outside first light and sunset",
+                "Calm \u00b7 NNW 6 mph, gusts 13"
+              ],
+              "drawbacks": [
+                "weak 0.3 kt outgoing current",
+                "midday water"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "2:10 AM",
+              "iso": "2026-11-08T07:10:00+00:00",
+              "value": "1.7 kt"
+            },
+            {
+              "kind": "In",
+              "time": "8:29 AM",
+              "iso": "2026-11-08T13:29:00+00:00",
+              "value": "1.8 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "2:54 PM",
+              "iso": "2026-11-08T19:54:00+00:00",
+              "value": "0.3 kt"
+            },
+            {
+              "kind": "In",
+              "time": "7:19 PM",
+              "iso": "2026-11-09T00:19:00+00:00",
+              "value": "1.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "62\u00b0 \u2013 76\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "N 5\u20138",
+            "wind_sub": "mph \u00b7 gusts to 13",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "62\u00b0",
+                "wind": "NE 5"
+              },
+              {
+                "label": "9a",
+                "temp": "68\u00b0",
+                "wind": "NE 5"
+              },
+              {
+                "label": "12p",
+                "temp": "75\u00b0",
+                "wind": "N 5"
+              },
+              {
+                "label": "3p",
+                "temp": "75\u00b0",
+                "wind": "NNW 7"
+              },
+              {
+                "label": "6p",
+                "temp": "72\u00b0",
+                "wind": "NNW 7"
+              },
+              {
+                "label": "9p",
+                "temp": "70\u00b0",
+                "wind": "N 6"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:22 AM",
+            "sunrise": "6:47",
+            "sunset": "5:41",
+            "last_light": "6:06 PM"
+          }
+        },
+        {
+          "key": "2026-11-09",
+          "is_today": false,
+          "tab": "Mon",
+          "date_long": "Monday, November 9",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "78\u00b0/63\u00b0",
+          "best": {
+            "rating": "Fair",
+            "score": 45,
+            "time": "1:43\u20134:19 PM"
+          },
+          "headline": "Monday evening is fair at best.",
+          "summary": "A weak 0.2 kt outgoing current reaches sunset, though its strongest current (~2:35\u20133:55 PM) mostly falls outside it. Expect a light N wind around 6 mph.",
+          "windows": [
+            {
+              "time": "1:43\u20134:19 PM",
+              "start": "2026-11-09T18:43:00+00:00",
+              "end": "2026-11-09T21:19:00+00:00",
+              "rating": "Fair",
+              "score": 45,
+              "score_text": "Score 45: \u221245 weak 0.2 kt outgoing current, \u221210 strongest current outside first light/sunset",
+              "losses": [
+                {
+                  "what": "weak 0.2 kt outgoing current",
+                  "points": 45
+                },
+                {
+                  "what": "strongest current outside first light/sunset",
+                  "points": 10
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.2 kt",
+              "fastest": [
+                "2026-11-09T19:36:30+00:00",
+                "2026-11-09T20:54:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-09T19:36:30+00:00",
+                "2026-11-09T20:54:30+00:00"
+              ],
+              "facts": [
+                "Weak outgoing current \u00b7 0.2 kt peak at 3:30 PM (slack 1:43 PM \u2192 4:19 PM)",
+                "Strongest current ~2:35\u20133:55 PM",
+                "Calm \u00b7 N 6 mph, gusts 13"
+              ],
+              "drawbacks": [
+                "weak 0.2 kt outgoing current",
+                "strongest current outside first light/sunset"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "2:37 AM",
+              "iso": "2026-11-09T07:37:00+00:00",
+              "value": "1.7 kt"
+            },
+            {
+              "kind": "In",
+              "time": "9:05 AM",
+              "iso": "2026-11-09T14:05:00+00:00",
+              "value": "1.7 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "3:30 PM",
+              "iso": "2026-11-09T20:30:00+00:00",
+              "value": "0.2 kt"
+            },
+            {
+              "kind": "In",
+              "time": "7:41 PM",
+              "iso": "2026-11-10T00:41:00+00:00",
+              "value": "1.2 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "63\u00b0 \u2013 78\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "NE 5\u20137",
+            "wind_sub": "mph \u00b7 gusts to 13",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "63\u00b0",
+                "wind": "ENE 5"
+              },
+              {
+                "label": "9a",
+                "temp": "69\u00b0",
+                "wind": "ENE 6"
+              },
+              {
+                "label": "12p",
+                "temp": "76\u00b0",
+                "wind": "NE 6"
+              },
+              {
+                "label": "3p",
+                "temp": "77\u00b0",
+                "wind": "N 7"
+              },
+              {
+                "label": "6p",
+                "temp": "73\u00b0",
+                "wind": "N 7"
+              },
+              {
+                "label": "9p",
+                "temp": "70\u00b0",
+                "wind": "NNE 6"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:23 AM",
+            "sunrise": "6:48",
+            "sunset": "5:41",
+            "last_light": "6:06 PM"
+          }
+        },
+        {
+          "key": "2026-11-10",
+          "is_today": false,
+          "tab": "Tue",
+          "date_long": "Tuesday, November 10",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "77\u00b0/63\u00b0",
+          "best": null,
+          "headline": "No outgoing current in daylight.",
+          "summary": "The current is incoming or slack through the daylight hours on Tuesday.",
+          "windows": [],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "3:06 AM",
+              "iso": "2026-11-10T08:06:00+00:00",
+              "value": "1.8 kt"
+            },
+            {
+              "kind": "In",
+              "time": "9:43 AM",
+              "iso": "2026-11-10T14:43:00+00:00",
+              "value": "1.6 kt"
+            },
+            {
+              "kind": "In",
+              "time": "8:08 PM",
+              "iso": "2026-11-11T01:08:00+00:00",
+              "value": "1.2 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "63\u00b0 \u2013 77\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "ENE 3\u20136",
+            "wind_sub": "mph \u00b7 gusts to 10",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "63\u00b0",
+                "wind": "E 5"
+              },
+              {
+                "label": "9a",
+                "temp": "69\u00b0",
+                "wind": "E 6"
+              },
+              {
+                "label": "12p",
+                "temp": "76\u00b0",
+                "wind": "ESE 3"
+              },
+              {
+                "label": "3p",
+                "temp": "77\u00b0",
+                "wind": "N 5"
+              },
+              {
+                "label": "6p",
+                "temp": "73\u00b0",
+                "wind": "NNW 5"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "N 6"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:24 AM",
+            "sunrise": "6:49",
+            "sunset": "5:40",
+            "last_light": "6:05 PM"
+          }
+        },
+        {
+          "key": "2026-11-11",
+          "is_today": false,
+          "tab": "Wed",
+          "date_long": "Wednesday, November 11",
+          "icon": "\u26c5",
+          "high_low": "76\u00b0/67\u00b0",
+          "best": {
+            "rating": "Great",
+            "score": 90,
+            "time": "6:24\u20137:25 AM"
+          },
+          "headline": "Wednesday morning looks great.",
+          "summary": "A strong 1.7 kt outgoing current is still running at first light until slack at 7:25 AM; its strongest current comes before dawn. Expect a light ENE wind around 5 mph.",
+          "windows": [
+            {
+              "time": "6:24\u20137:25 AM",
+              "start": "2026-11-11T11:24:55.281692+00:00",
+              "end": "2026-11-11T12:25:00+00:00",
+              "rating": "Great",
+              "score": 90,
+              "score_text": "Score 90: \u221210 strongest current outside first light/sunset",
+              "losses": [
+                {
+                  "what": "strongest current outside first light/sunset",
+                  "points": 10
+                }
+              ],
+              "strength": "Strong",
+              "size": "1.7 kt",
+              "fastest": null,
+              "fastest_full": [
+                "2026-11-11T06:30:00+00:00",
+                "2026-11-11T10:32:30+00:00"
+              ],
+              "facts": [
+                "Strong outgoing current \u00b7 1.7 kt peak at 3:40 AM (slack 11:20 PM \u2192 7:25 AM)",
+                "Strongest current was before first light (~1:30\u20135:30 AM); slowing now",
+                "Calm \u00b7 ENE 5 mph, gusts 7"
+              ],
+              "drawbacks": [
+                "strongest current outside first light/sunset"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "3:40 AM",
+              "iso": "2026-11-11T08:40:00+00:00",
+              "value": "1.7 kt"
+            },
+            {
+              "kind": "In",
+              "time": "10:26 AM",
+              "iso": "2026-11-11T15:26:00+00:00",
+              "value": "1.5 kt"
+            },
+            {
+              "kind": "In",
+              "time": "8:40 PM",
+              "iso": "2026-11-12T01:40:00+00:00",
+              "value": "1.1 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "67\u00b0 \u2013 76\u00b0",
+            "sky": "Partly cloudy",
+            "wind": "N 5\u20138",
+            "wind_sub": "mph \u00b7 gusts to 10",
+            "rain": "7%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "67\u00b0",
+                "wind": "ENE 5"
+              },
+              {
+                "label": "9a",
+                "temp": "72\u00b0",
+                "wind": "NE 5"
+              },
+              {
+                "label": "12p",
+                "temp": "75\u00b0",
+                "wind": "NNW 7"
+              },
+              {
+                "label": "3p",
+                "temp": "75\u00b0",
+                "wind": "NW 8"
+              },
+              {
+                "label": "6p",
+                "temp": "73\u00b0",
+                "wind": "NNW 6"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "NNW 5"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:24 AM",
+            "sunrise": "6:50",
+            "sunset": "5:40",
+            "last_light": "6:05 PM"
+          }
+        }
+      ],
+      "sources": [
+        "Currents: NOAA ACT8656 Clearwater Pass, 0.2 mi NE of Sand Key predictions",
+        "Weather: National Weather Service (updated 2:16 AM)",
+        "Observations: NOAA 8726724 Clearwater Beach",
+        "Red tide: FWC Karenia brevis samples"
+      ],
+      "station_name": "Clearwater Beach",
+      "app_url": "https://blakezurman.github.io/inshore-briefing-site/"
+    },
+    {
+      "schema_version": 3,
+      "spot_id": "johns-pass",
+      "short_name": "Johns Pass",
+      "is_pass": true,
+      "tides_label": "Current at Johns Pass Entrance",
+      "chart_note": "<b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.",
+      "rules_text": "Each window starts at 100 points: Prime 90+, Great 75+, Good 60+, Fair 40+, Poor below. Points lost: peak outgoing current 1\u20131.5 kt \u221210, 0.75\u20131 kt \u221220, under 0.75 kt \u221245; strongest current misses first light and sunset \u221210 (midday \u221220); wind 9\u201312 mph \u221215, 13\u201315 mph \u221230, over 15 mph \u221245; SSW\u2013WNW wind \u221215 more; gusts 20+ \u22125; rain chance 20%+ \u22125, 50%+ \u221210; storms \u221220; cool water (under 60\u00b0) \u221210. Prime also needs a peak current of 1.5 kt or more, strongest current at first light or sunset, wind 8 mph or less and not SSW\u2013WNW, rain under 20%, no storms, clear water. Red tide nearby, cold water (under 55\u00b0) or choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) is Skip. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates.",
+      "date": "2026-11-07",
+      "date_long": "Saturday, November 7",
+      "location": "Johns Pass",
+      "generated": "2026-11-07T16:01:03.632628+00:00",
+      "generated_local": "11:01 AM EST",
+      "headline": "A slow day for moving water.",
+      "summary": "A weak 0.5 kt outgoing current reaches sunset, though its strongest current (~12:50\u20133:30 PM) mostly falls outside it. Expect a breezy NNW wind around 11 mph.",
+      "problems": [],
+      "windows": [
+        {
+          "time": "11:29 AM\u20134:48 PM",
+          "start": "2026-11-07T16:29:00+00:00",
+          "end": "2026-11-07T21:48:00+00:00",
+          "rating": "Poor",
+          "score": 30,
+          "score_text": "Score 30: \u221245 weak 0.5 kt outgoing current, \u221215 11 mph wind, \u221210 strongest current outside first light/sunset",
+          "losses": [
+            {
+              "what": "weak 0.5 kt outgoing current",
+              "points": 45
+            },
+            {
+              "what": "11 mph wind",
+              "points": 15
+            },
+            {
+              "what": "strongest current outside first light/sunset",
+              "points": 10
+            }
+          ],
+          "strength": "Weak",
+          "size": "0.5 kt",
+          "fastest": [
+            "2026-11-07T17:49:00+00:00",
+            "2026-11-07T20:28:30+00:00"
+          ],
+          "fastest_full": [
+            "2026-11-07T17:49:00+00:00",
+            "2026-11-07T20:28:30+00:00"
+          ],
+          "facts": [
+            "Weak outgoing current \u00b7 0.5 kt peak at 2:09 PM (slack 11:29 AM \u2192 4:48 PM)",
+            "Strongest current ~12:50\u20133:30 PM",
+            "Breezy \u00b7 NNW 11 mph, gusts 17"
+          ],
+          "drawbacks": [
+            "weak 0.5 kt outgoing current",
+            "11 mph wind",
+            "strongest current outside first light/sunset"
+          ]
+        }
+      ],
+      "tides": [
+        {
+          "kind": "Out",
+          "time": "2:17 AM",
+          "iso": "2026-11-07T07:17:00+00:00",
+          "value": "1.5 kt"
+        },
+        {
+          "kind": "In",
+          "time": "8:34 AM",
+          "iso": "2026-11-07T13:34:00+00:00",
+          "value": "0.5 kt"
+        },
+        {
+          "kind": "Out",
+          "time": "2:09 PM",
+          "iso": "2026-11-07T19:09:00+00:00",
+          "value": "0.5 kt"
+        },
+        {
+          "kind": "In",
+          "time": "6:32 PM",
+          "iso": "2026-11-07T23:32:00+00:00",
+          "value": "0.3 kt"
+        }
+      ],
+      "has_chart": true,
+      "water_level": "Water is running 0.8 ft above prediction at Clearwater Beach (10:54 AM). Water is being held in; lows may not drain as far as shown.",
+      "weather": {
+        "temp": "71\u00b0 \u2013 78\u00b0",
+        "sky": "Mostly sunny",
+        "wind": "N 7\u201314",
+        "wind_sub": "mph \u00b7 gusts to 17",
+        "rain": "1%",
+        "rain_sub": "Max chance, afternoon",
+        "blocks": [
+          {
+            "label": "6a",
+            "temp": "72\u00b0",
+            "wind": "N 7"
+          },
+          {
+            "label": "9a",
+            "temp": "74\u00b0",
+            "wind": "NNE 8"
+          },
+          {
+            "label": "12p",
+            "temp": "78\u00b0",
+            "wind": "N 9"
+          },
+          {
+            "label": "3p",
+            "temp": "78\u00b0",
+            "wind": "NNW 13"
+          },
+          {
+            "label": "6p",
+            "temp": "75\u00b0",
+            "wind": "N 13"
+          },
+          {
+            "label": "9p",
+            "temp": "72\u00b0",
+            "wind": "N 10"
+          }
+        ]
+      },
+      "weather_source": "National Weather Service",
+      "weather_fallback": null,
+      "sun": {
+        "first_light": "6:21 AM",
+        "sunrise": "6:46",
+        "sunset": "5:42",
+        "last_light": "6:07 PM"
+      },
+      "water_temp": "77\u00b0",
+      "red_tide": {
+        "text": "Red tide: no FWC samples within 20 km over the last 8 days.",
+        "warn": false
+      },
+      "alerts": [],
+      "marine": "Bay and inland waters: a moderate chop (this afternoon)",
+      "upcoming": [
+        {
+          "date": "2026-11-08",
+          "weekday": "Sunday",
+          "sky": "Sunny \u00b7 77\u00b0/65\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            },
+            {
+              "label": "PM",
+              "text": "weak outgoing current 3:42\u20135:11 PM",
+              "rating": "Poor",
+              "score": 30,
+              "why": "weak 0.3 kt outgoing current, 9 mph wind, strongest current outside first light/sunset"
+            }
+          ],
+          "wind": "Wind N 7 mph, gusts 13 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-09",
+          "weekday": "Monday",
+          "sky": "Mostly sunny \u00b7 78\u00b0/66\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "strong outgoing current 6:23\u20137:15 AM",
+              "rating": "Great",
+              "score": 90,
+              "why": "strongest current outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "weak outgoing current 3:41\u20135:28 PM",
+              "rating": "Fair",
+              "score": 55,
+              "why": "weak 0.2 kt outgoing current"
+            }
+          ],
+          "wind": "Wind NE 8 mph, gusts 12 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-10",
+          "weekday": "Tuesday",
+          "sky": "Mostly sunny \u00b7 78\u00b0/66\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "strong outgoing current 6:23\u20137:58 AM",
+              "rating": "Great",
+              "score": 90,
+              "why": "strongest current outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "weak outgoing current 3:40\u20135:37 PM",
+              "rating": "Fair",
+              "score": 55,
+              "why": "weak 0.1 kt outgoing current"
+            }
+          ],
+          "wind": "Wind ENE 7 mph, gusts 12 \u00b7 Rain 0%",
+          "hazards": []
+        },
+        {
+          "date": "2026-11-11",
+          "weekday": "Wednesday",
+          "sky": "Partly cloudy \u00b7 76\u00b0/68\u00b0",
+          "picks": [
+            {
+              "label": "AM",
+              "text": "strong outgoing current 6:24\u20138:42 AM",
+              "rating": "Great",
+              "score": 90,
+              "why": "strongest current outside first light/sunset"
+            },
+            {
+              "label": "PM",
+              "text": "incoming or slack current",
+              "rating": null,
+              "why": null
+            }
+          ],
+          "wind": "Wind N 7 mph, gusts 10 \u00b7 Rain 9%",
+          "hazards": []
+        }
+      ],
+      "days": [
+        {
+          "key": "2026-11-07",
+          "is_today": true,
+          "tab": "Today",
+          "date_long": "Saturday, November 7",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "78\u00b0/71\u00b0",
+          "best": {
+            "rating": "Poor",
+            "score": 30,
+            "time": "11:29 AM\u20134:48 PM"
+          },
+          "headline": "A slow day for moving water.",
+          "summary": "A weak 0.5 kt outgoing current reaches sunset, though its strongest current (~12:50\u20133:30 PM) mostly falls outside it. Expect a breezy NNW wind around 11 mph.",
+          "windows": [
+            {
+              "time": "11:29 AM\u20134:48 PM",
+              "start": "2026-11-07T16:29:00+00:00",
+              "end": "2026-11-07T21:48:00+00:00",
+              "rating": "Poor",
+              "score": 30,
+              "score_text": "Score 30: \u221245 weak 0.5 kt outgoing current, \u221215 11 mph wind, \u221210 strongest current outside first light/sunset",
+              "losses": [
+                {
+                  "what": "weak 0.5 kt outgoing current",
+                  "points": 45
+                },
+                {
+                  "what": "11 mph wind",
+                  "points": 15
+                },
+                {
+                  "what": "strongest current outside first light/sunset",
+                  "points": 10
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.5 kt",
+              "fastest": [
+                "2026-11-07T17:49:00+00:00",
+                "2026-11-07T20:28:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-07T17:49:00+00:00",
+                "2026-11-07T20:28:30+00:00"
+              ],
+              "facts": [
+                "Weak outgoing current \u00b7 0.5 kt peak at 2:09 PM (slack 11:29 AM \u2192 4:48 PM)",
+                "Strongest current ~12:50\u20133:30 PM",
+                "Breezy \u00b7 NNW 11 mph, gusts 17"
+              ],
+              "drawbacks": [
+                "weak 0.5 kt outgoing current",
+                "11 mph wind",
+                "strongest current outside first light/sunset"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "2:17 AM",
+              "iso": "2026-11-07T07:17:00+00:00",
+              "value": "1.5 kt"
+            },
+            {
+              "kind": "In",
+              "time": "8:34 AM",
+              "iso": "2026-11-07T13:34:00+00:00",
+              "value": "0.5 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "2:09 PM",
+              "iso": "2026-11-07T19:09:00+00:00",
+              "value": "0.5 kt"
+            },
+            {
+              "kind": "In",
+              "time": "6:32 PM",
+              "iso": "2026-11-07T23:32:00+00:00",
+              "value": "0.3 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "71\u00b0 \u2013 78\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "N 7\u201314",
+            "wind_sub": "mph \u00b7 gusts to 17",
+            "rain": "1%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "72\u00b0",
+                "wind": "N 7"
+              },
+              {
+                "label": "9a",
+                "temp": "74\u00b0",
+                "wind": "NNE 8"
+              },
+              {
+                "label": "12p",
+                "temp": "78\u00b0",
+                "wind": "N 9"
+              },
+              {
+                "label": "3p",
+                "temp": "78\u00b0",
+                "wind": "NNW 13"
+              },
+              {
+                "label": "6p",
+                "temp": "75\u00b0",
+                "wind": "N 13"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "N 10"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:21 AM",
+            "sunrise": "6:46",
+            "sunset": "5:42",
+            "last_light": "6:07 PM"
+          }
+        },
+        {
+          "key": "2026-11-08",
+          "is_today": false,
+          "tab": "Sun",
+          "date_long": "Sunday, November 8",
+          "icon": "\u2600\ufe0f",
+          "high_low": "77\u00b0/65\u00b0",
+          "best": {
+            "rating": "Fair",
+            "score": 45,
+            "time": "12:28\u20135:11 PM"
+          },
+          "headline": "Sunday evening is fair at best.",
+          "summary": "A weak 0.3 kt outgoing current reaches sunset, though its strongest current (~1:35\u20134:00 PM) mostly falls outside it. Expect a light NNW wind around 7 mph.",
+          "windows": [
+            {
+              "time": "12:28\u20135:11 PM",
+              "start": "2026-11-08T17:28:00+00:00",
+              "end": "2026-11-08T22:11:00+00:00",
+              "rating": "Fair",
+              "score": 45,
+              "score_text": "Score 45: \u221245 weak 0.3 kt outgoing current, \u221210 strongest current outside first light/sunset",
+              "losses": [
+                {
+                  "what": "weak 0.3 kt outgoing current",
+                  "points": 45
+                },
+                {
+                  "what": "strongest current outside first light/sunset",
+                  "points": 10
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.3 kt",
+              "fastest": [
+                "2026-11-08T18:36:30+00:00",
+                "2026-11-08T20:58:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-08T18:36:30+00:00",
+                "2026-11-08T20:58:00+00:00"
+              ],
+              "facts": [
+                "Weak outgoing current \u00b7 0.3 kt peak at 2:45 PM (slack 12:28 PM \u2192 5:11 PM)",
+                "Strongest current ~1:35\u20134:00 PM",
+                "Calm \u00b7 NNW 7 mph, gusts 13"
+              ],
+              "drawbacks": [
+                "weak 0.3 kt outgoing current",
+                "strongest current outside first light/sunset"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "2:56 AM",
+              "iso": "2026-11-08T07:56:00+00:00",
+              "value": "1.7 kt"
+            },
+            {
+              "kind": "In",
+              "time": "9:10 AM",
+              "iso": "2026-11-08T14:10:00+00:00",
+              "value": "0.5 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "2:45 PM",
+              "iso": "2026-11-08T19:45:00+00:00",
+              "value": "0.3 kt"
+            },
+            {
+              "kind": "In",
+              "time": "7:14 PM",
+              "iso": "2026-11-09T00:14:00+00:00",
+              "value": "0.4 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "65\u00b0 \u2013 77\u00b0",
+            "sky": "Sunny",
+            "wind": "N 5\u201310",
+            "wind_sub": "mph \u00b7 gusts to 13",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "65\u00b0",
+                "wind": "NNE 7"
+              },
+              {
+                "label": "9a",
+                "temp": "70\u00b0",
+                "wind": "NE 7"
+              },
+              {
+                "label": "12p",
+                "temp": "76\u00b0",
+                "wind": "N 5"
+              },
+              {
+                "label": "3p",
+                "temp": "77\u00b0",
+                "wind": "NNW 8"
+              },
+              {
+                "label": "6p",
+                "temp": "74\u00b0",
+                "wind": "NNW 10"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "N 9"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:22 AM",
+            "sunrise": "6:47",
+            "sunset": "5:42",
+            "last_light": "6:06 PM"
+          }
+        },
+        {
+          "key": "2026-11-09",
+          "is_today": false,
+          "tab": "Mon",
+          "date_long": "Monday, November 9",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "78\u00b0/66\u00b0",
+          "best": {
+            "rating": "Great",
+            "score": 90,
+            "time": "6:23\u20137:15 AM"
+          },
+          "headline": "Monday morning looks great.",
+          "summary": "A strong 1.8 kt outgoing current is still running at first light until slack at 7:15 AM; its strongest current comes before dawn. Expect a breezy ENE wind around 8 mph. The evening's weak 0.2 kt outgoing current rates Fair (weak 0.2 kt outgoing current).",
+          "windows": [
+            {
+              "time": "6:23\u20137:15 AM",
+              "start": "2026-11-09T11:23:06.993547+00:00",
+              "end": "2026-11-09T12:15:00+00:00",
+              "rating": "Great",
+              "score": 90,
+              "score_text": "Score 90: \u221210 strongest current outside first light/sunset",
+              "losses": [
+                {
+                  "what": "strongest current outside first light/sunset",
+                  "points": 10
+                }
+              ],
+              "strength": "Strong",
+              "size": "1.8 kt",
+              "fastest": null,
+              "fastest_full": [
+                "2026-11-09T06:04:30+00:00",
+                "2026-11-09T10:25:00+00:00"
+              ],
+              "facts": [
+                "Strong outgoing current \u00b7 1.8 kt peak at 3:35 AM (slack 10:34 PM \u2192 7:15 AM)",
+                "Strongest current was before first light (~1:05\u20135:25 AM); slowing now",
+                "Breezy \u00b7 ENE 8 mph, gusts 12"
+              ],
+              "drawbacks": [
+                "strongest current outside first light/sunset"
+              ]
+            },
+            {
+              "time": "1:25\u20135:28 PM",
+              "start": "2026-11-09T18:25:00+00:00",
+              "end": "2026-11-09T22:28:00+00:00",
+              "rating": "Fair",
+              "score": 55,
+              "score_text": "Score 55: \u221245 weak 0.2 kt outgoing current",
+              "losses": [
+                {
+                  "what": "weak 0.2 kt outgoing current",
+                  "points": 45
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.2 kt",
+              "fastest": [
+                "2026-11-09T19:21:30+00:00",
+                "2026-11-09T21:23:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-09T19:21:30+00:00",
+                "2026-11-09T21:23:00+00:00"
+              ],
+              "facts": [
+                "Weak outgoing current \u00b7 0.2 kt peak at 3:18 PM (slack 1:25 PM \u2192 5:28 PM)",
+                "Strongest current ~2:20\u20134:25 PM",
+                "Peak flow overlaps sunset",
+                "Calm \u00b7 NNE 7 mph, gusts 12"
+              ],
+              "drawbacks": [
+                "weak 0.2 kt outgoing current"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "3:35 AM",
+              "iso": "2026-11-09T08:35:00+00:00",
+              "value": "1.8 kt"
+            },
+            {
+              "kind": "In",
+              "time": "9:43 AM",
+              "iso": "2026-11-09T14:43:00+00:00",
+              "value": "0.6 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "3:18 PM",
+              "iso": "2026-11-09T20:18:00+00:00",
+              "value": "0.2 kt"
+            },
+            {
+              "kind": "In",
+              "time": "7:54 PM",
+              "iso": "2026-11-10T00:54:00+00:00",
+              "value": "0.4 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "66\u00b0 \u2013 78\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "NE 6\u20139",
+            "wind_sub": "mph \u00b7 gusts to 12",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "66\u00b0",
+                "wind": "ENE 8"
+              },
+              {
+                "label": "9a",
+                "temp": "71\u00b0",
+                "wind": "ENE 9"
+              },
+              {
+                "label": "12p",
+                "temp": "76\u00b0",
+                "wind": "ENE 7"
+              },
+              {
+                "label": "3p",
+                "temp": "78\u00b0",
+                "wind": "N 7"
+              },
+              {
+                "label": "6p",
+                "temp": "75\u00b0",
+                "wind": "N 8"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "NNE 9"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:23 AM",
+            "sunrise": "6:48",
+            "sunset": "5:41",
+            "last_light": "6:06 PM"
+          }
+        },
+        {
+          "key": "2026-11-10",
+          "is_today": false,
+          "tab": "Tue",
+          "date_long": "Tuesday, November 10",
+          "icon": "\ud83c\udf24\ufe0f",
+          "high_low": "78\u00b0/66\u00b0",
+          "best": {
+            "rating": "Great",
+            "score": 90,
+            "time": "6:23\u20137:58 AM"
+          },
+          "headline": "Tuesday morning looks great.",
+          "summary": "A strong 1.8 kt outgoing current is still running at first light until slack at 7:58 AM; its strongest current comes before dawn. Expect a breezy E wind around 8 mph. The evening's weak 0.1 kt outgoing current rates Fair (weak 0.1 kt outgoing current).",
+          "windows": [
+            {
+              "time": "6:23\u20137:58 AM",
+              "start": "2026-11-10T11:23:49.098841+00:00",
+              "end": "2026-11-10T12:58:00+00:00",
+              "rating": "Great",
+              "score": 90,
+              "score_text": "Score 90: \u221210 strongest current outside first light/sunset",
+              "losses": [
+                {
+                  "what": "strongest current outside first light/sunset",
+                  "points": 10
+                }
+              ],
+              "strength": "Strong",
+              "size": "1.8 kt",
+              "fastest": null,
+              "fastest_full": [
+                "2026-11-10T06:36:30+00:00",
+                "2026-11-10T11:07:00+00:00"
+              ],
+              "facts": [
+                "Strong outgoing current \u00b7 1.8 kt peak at 4:16 AM (slack 10:57 PM \u2192 7:58 AM)",
+                "Strongest current was before first light (~1:35\u20136:05 AM); slowing now",
+                "Breezy \u00b7 E 8 mph, gusts 12"
+              ],
+              "drawbacks": [
+                "strongest current outside first light/sunset"
+              ]
+            },
+            {
+              "time": "2:19\u20135:37 PM",
+              "start": "2026-11-10T19:19:00+00:00",
+              "end": "2026-11-10T22:37:00+00:00",
+              "rating": "Fair",
+              "score": 55,
+              "score_text": "Score 55: \u221245 weak 0.1 kt outgoing current",
+              "losses": [
+                {
+                  "what": "weak 0.1 kt outgoing current",
+                  "points": 45
+                }
+              ],
+              "strength": "Weak",
+              "size": "0.1 kt",
+              "fastest": [
+                "2026-11-10T20:06:00+00:00",
+                "2026-11-10T21:45:00+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-10T20:06:00+00:00",
+                "2026-11-10T21:45:00+00:00"
+              ],
+              "facts": [
+                "Weak outgoing current \u00b7 0.1 kt peak at 3:53 PM (slack 2:19 PM \u2192 5:37 PM)",
+                "Strongest current ~3:05\u20134:45 PM",
+                "Peak flow overlaps sunset",
+                "Calm \u00b7 NNW 5 mph, gusts 8"
+              ],
+              "drawbacks": [
+                "weak 0.1 kt outgoing current"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "4:16 AM",
+              "iso": "2026-11-10T09:16:00+00:00",
+              "value": "1.8 kt"
+            },
+            {
+              "kind": "In",
+              "time": "10:17 AM",
+              "iso": "2026-11-10T15:17:00+00:00",
+              "value": "0.6 kt"
+            },
+            {
+              "kind": "Out",
+              "time": "3:53 PM",
+              "iso": "2026-11-10T20:53:00+00:00",
+              "value": "0.1 kt"
+            },
+            {
+              "kind": "In",
+              "time": "8:32 PM",
+              "iso": "2026-11-11T01:32:00+00:00",
+              "value": "0.4 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "66\u00b0 \u2013 78\u00b0",
+            "sky": "Mostly sunny",
+            "wind": "ENE 5\u20138",
+            "wind_sub": "mph \u00b7 gusts to 12",
+            "rain": "0%",
+            "rain_sub": "Daylight max",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "66\u00b0",
+                "wind": "E 8"
+              },
+              {
+                "label": "9a",
+                "temp": "71\u00b0",
+                "wind": "E 8"
+              },
+              {
+                "label": "12p",
+                "temp": "76\u00b0",
+                "wind": "ESE 6"
+              },
+              {
+                "label": "3p",
+                "temp": "78\u00b0",
+                "wind": "NNW 5"
+              },
+              {
+                "label": "6p",
+                "temp": "75\u00b0",
+                "wind": "NNW 7"
+              },
+              {
+                "label": "9p",
+                "temp": "72\u00b0",
+                "wind": "N 7"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:23 AM",
+            "sunrise": "6:48",
+            "sunset": "5:40",
+            "last_light": "6:05 PM"
+          }
+        },
+        {
+          "key": "2026-11-11",
+          "is_today": false,
+          "tab": "Wed",
+          "date_long": "Wednesday, November 11",
+          "icon": "\u26c5",
+          "high_low": "76\u00b0/68\u00b0",
+          "best": {
+            "rating": "Great",
+            "score": 90,
+            "time": "6:24\u20138:42 AM"
+          },
+          "headline": "Wednesday morning looks great.",
+          "summary": "A strong 1.8 kt outgoing current reaches first light, though its strongest current (~2:10\u20136:50 AM) mostly falls outside it. Expect a light ENE wind around 5 mph.",
+          "windows": [
+            {
+              "time": "6:24\u20138:42 AM",
+              "start": "2026-11-11T11:24:31.502287+00:00",
+              "end": "2026-11-11T13:42:00+00:00",
+              "rating": "Great",
+              "score": 90,
+              "score_text": "Score 90: \u221210 strongest current outside first light/sunset",
+              "losses": [
+                {
+                  "what": "strongest current outside first light/sunset",
+                  "points": 10
+                }
+              ],
+              "strength": "Strong",
+              "size": "1.8 kt",
+              "fastest": [
+                "2026-11-11T11:24:31.502287+00:00",
+                "2026-11-11T11:49:30+00:00"
+              ],
+              "fastest_full": [
+                "2026-11-11T07:10:00+00:00",
+                "2026-11-11T11:49:30+00:00"
+              ],
+              "facts": [
+                "Strong outgoing current \u00b7 1.8 kt peak at 4:57 AM (slack 11:23 PM \u2192 8:42 AM)",
+                "Strongest current ~6:25\u20136:50 AM",
+                "Calm \u00b7 ENE 5 mph, gusts 8"
+              ],
+              "drawbacks": [
+                "strongest current outside first light/sunset"
+              ]
+            }
+          ],
+          "tides": [
+            {
+              "kind": "Out",
+              "time": "4:57 AM",
+              "iso": "2026-11-11T09:57:00+00:00",
+              "value": "1.8 kt"
+            },
+            {
+              "kind": "In",
+              "time": "10:53 AM",
+              "iso": "2026-11-11T15:53:00+00:00",
+              "value": "0.5 kt"
+            },
+            {
+              "kind": "In",
+              "time": "9:10 PM",
+              "iso": "2026-11-12T02:10:00+00:00",
+              "value": "0.4 kt"
+            }
+          ],
+          "has_chart": true,
+          "weather": {
+            "temp": "68\u00b0 \u2013 76\u00b0",
+            "sky": "Partly cloudy",
+            "wind": "N 5\u20138",
+            "wind_sub": "mph \u00b7 gusts to 10",
+            "rain": "9%",
+            "rain_sub": "Max chance, afternoon",
+            "blocks": [
+              {
+                "label": "6a",
+                "temp": "68\u00b0",
+                "wind": "ENE 6"
+              },
+              {
+                "label": "9a",
+                "temp": "72\u00b0",
+                "wind": "ENE 5"
+              },
+              {
+                "label": "12p",
+                "temp": "75\u00b0",
+                "wind": "NNW 7"
+              },
+              {
+                "label": "3p",
+                "temp": "76\u00b0",
+                "wind": "NW 8"
+              },
+              {
+                "label": "6p",
+                "temp": "73\u00b0",
+                "wind": "NW 7"
+              },
+              {
+                "label": "9p",
+                "temp": "71\u00b0",
+                "wind": "NNW 6"
+              }
+            ]
+          },
+          "hazards": [],
+          "season_notes": [],
+          "sun": {
+            "first_light": "6:24 AM",
+            "sunrise": "6:49",
+            "sunset": "5:40",
+            "last_light": "6:05 PM"
+          }
+        }
+      ],
+      "sources": [
+        "Currents: NOAA JOP1101 Johns Pass Entrance predictions",
+        "Weather: National Weather Service (updated 2:16 AM)",
+        "Observations: NOAA 8726724 Clearwater Beach",
+        "Red tide: FWC Karenia brevis samples"
+      ],
+      "station_name": "Clearwater Beach",
+      "app_url": "https://blakezurman.github.io/inshore-briefing-site/"
+    }
+  ]
+}

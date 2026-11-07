@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F5F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Inshore">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<title>Inshore Briefing</title>
+<style>
+  :root {
+    --bg: #F5F5F7; --card: #FFFFFF; --ink: #1D1D1F; --ink2: #6E6E73; --ink3: #86868B;
+    --line: #E8E8ED; --blue: #0A6CD6; --warn: #B25000; --warn-bg: #FFF4E5; --ok: #0F6B43;
+    --prime: #0F6B43; --prime-bg: #E6F4EC; --great: #0B7285; --great-bg: #E3F3F5;
+    --good: #0A5CAD; --good-bg: #E8F1FB; --fair: #9A5B00; --fair-bg: #FFF4E5;
+    --poor: #6E6E73; --poor-bg: #F0F0F2; --skip: #C42B1C; --skip-bg: #FDECEA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000; --card: #1C1C1E; --ink: #F5F5F7; --ink2: #AEAEB2; --ink3: #8E8E93;
+      --line: #38383A; --blue: #409CFF; --warn: #FFB340; --warn-bg: #3A2A12; --ok: #4CD27E;
+      --prime: #4CD27E; --prime-bg: #16301F; --great: #5AC8D8; --great-bg: #10302F;
+      --good: #64AEFF; --good-bg: #13283F; --fair: #FFB340; --fair-bg: #3A2A12;
+      --poor: #AEAEB2; --poor-bg: #2C2C2E; --skip: #FF6961; --skip-bg: #3B1715;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* The top band of an iPhone screen blurs what's behind it: keep the title 44px below the safe area
+       (an iOS navigation bar row). Shared rule: C:\dev\ios-web-style\STYLE.md section 4. */
+    padding: calc(env(safe-area-inset-top, 0px) + 44px) 16px calc(env(safe-area-inset-bottom) + 28px);
+  }
+  main { max-width: 600px; margin: 0 auto; }
+  header { padding: 0 4px 16px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .3px; color: var(--ink3); text-transform: uppercase; }
+  h1 { font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -.4px; margin: 4px 0 0; }
+  .updated { font-size: 13px; color: var(--ink3); margin-top: 4px; }
+  .card { background: var(--card); border-radius: 18px; padding: 22px 20px; margin-bottom: 12px; }
+  .label { font-size: 12px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--ink3); margin-bottom: 12px; }
+  .hero h2 { font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.3px; margin: 0; }
+  .hero p { font-size: 16px; line-height: 1.55; color: var(--ink2); margin: 10px 0 0; }
+  .banner { background: var(--warn-bg); color: var(--warn); border-radius: 12px; padding: 10px 14px; font-size: 14px; margin-bottom: 12px; }
+  .row + .row { border-top: 1px solid var(--line); }
+  .row { padding: 14px 0; }
+  .label + .row { padding-top: 2px; }
+  .row-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .row-title { font-size: 17px; font-weight: 600; }
+  .facts { font-size: 14px; line-height: 1.6; color: var(--ink2); margin-top: 6px; }
+  .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .pill.Prime { color: var(--prime); background: var(--prime-bg); }
+  .pill.Great { color: var(--great); background: var(--great-bg); }
+  .pill.Good { color: var(--good); background: var(--good-bg); }
+  .pill.Fair { color: var(--fair); background: var(--fair-bg); }
+  .pill.Poor { color: var(--poor); background: var(--poor-bg); }
+  .pill.Skip { color: var(--skip); background: var(--skip-bg); }
+  .score { font-size: 13px; color: var(--ink3); margin-top: 4px; }
+  .chart img { display: block; width: 100%; height: auto; }
+  .grid { display: grid; grid-template-columns: repeat(var(--cols, 3), 1fr); gap: 8px; }
+  .stat .k { font-size: 12px; color: var(--ink3); }
+  .stat .v { font-size: 20px; font-weight: 600; margin-top: 2px; }
+  .stat .s { font-size: 12px; color: var(--ink2); }
+  .tides { --cols: 4; text-align: center; margin-top: 14px; }
+  .tides .k { font-weight: 600; letter-spacing: .4px; }
+  .tides .v { font-size: 17px; }
+  .blocks { --cols: 6; text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 8px 0; margin: 16px 0 14px; }
+  .blocks .v { font-size: 15px; margin-top: 4px; }
+  .note { font-size: 12px; line-height: 1.5; color: var(--ink3); margin-top: 12px; }
+  .note b { color: var(--blue); }
+  .sub { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 14px; font-size: 14px; color: var(--ink2); }
+  .warn { color: var(--warn); font-weight: 600; }
+  .ok { color: var(--ok); font-weight: 600; }
+  .day-sky { font-size: 14px; color: var(--ink2); white-space: nowrap; }
+  .picks { font-size: 14px; line-height: 1.6; margin-top: 4px; }
+  .muted { color: var(--ink3); }
+  .hazard { font-size: 13px; color: var(--warn); margin-top: 4px; }
+  footer { font-size: 12px; line-height: 1.55; color: var(--ink3); padding: 10px 6px; }
+  #stale { display: none; }
+  .days { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 12px; }
+  .spots { display: flex; background: var(--card); border-radius: 12px; padding: 3px; gap: 3px; margin-bottom: 10px; }
+  .spot-btn {
+    flex: 1; appearance: none; border: 0; margin: 0; font: inherit; font-size: 14px; font-weight: 600; color: var(--ink2);
+    background: transparent; border-radius: 9px; padding: 8px 10px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0;
+  }
+  .spot-btn[aria-selected="true"] { background: var(--blue); color: #FFFFFF; }
+  .spot[hidden] { display: none; }
+  .season { font-size: 13px; color: var(--blue); margin-top: 6px; }
+  .day {
+    appearance: none; border: 0; margin: 0; font: inherit; color: inherit; cursor: pointer;
+    background: var(--card); border-radius: 14px; padding: 10px 2px 9px; text-align: center;
+    box-shadow: inset 0 0 0 2px transparent; transition: box-shadow .15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .day[aria-selected="true"] { box-shadow: inset 0 0 0 2px var(--blue); }
+  .day .t { font-size: 12px; font-weight: 600; color: var(--ink2); }
+  .day[aria-selected="true"] .t { color: var(--blue); }
+  .day .i { font-size: 22px; line-height: 30px; }
+  .day .hl { font-size: 13px; font-weight: 600; }
+  .day .r { font-size: 11px; font-weight: 600; margin-top: 3px; }
+  .day .r::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: currentColor; margin-right: 3px; vertical-align: 1px; }
+  .day .r.none { color: var(--ink3); }
+  .day .r.none::before { display: none; }
+  .r.Prime { color: var(--prime); } .r.Great { color: var(--great); } .r.Good { color: var(--good); }
+  .r.Fair { color: var(--fair); } .r.Poor { color: var(--poor); } .r.Skip { color: var(--skip); }
+  .panel[hidden] { display: none; }
+  .when { font-size: 13px; font-weight: 600; color: var(--ink3); margin-bottom: 6px; }
+  @media (max-width: 380px) { .blocks .v { font-size: 14px; } .stat .v { font-size: 18px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Inshore Briefing</div>
+    <h1>Saturday, November 7</h1>
+    <div class="updated" id="updated" data-generated="2026-11-07T16:01:03.632628+00:00" data-schedule="01:00,10:40,13:00,16:00,19:00,22:00">Updated 11:01 AM EST</div>
+  </header>
+
+  <div class="banner" id="stale"></div>
+
+  <nav class="spots" role="tablist" aria-label="Spots">
+    <button class="spot-btn" role="tab" id="spot-tab-dock" aria-controls="spot-dock" aria-selected="true" data-spot="dock">Dock</button>
+    <button class="spot-btn" role="tab" id="spot-tab-clearwater-pass" aria-controls="spot-clearwater-pass" aria-selected="false" data-spot="clearwater-pass">Clearwater</button>
+    <button class="spot-btn" role="tab" id="spot-tab-johns-pass" aria-controls="spot-johns-pass" aria-selected="false" data-spot="johns-pass">Johns Pass</button>
+  </nav>
+
+  <div class="spot" id="spot-dock" data-spot="dock">
+
+  <nav class="days" role="tablist" aria-label="Days at Indian Shores dock">
+    <button class="day" role="tab" id="tab-dock-2026-11-07" aria-controls="day-dock-2026-11-07" aria-selected="true" data-key="2026-11-07">
+      <div class="t">Today</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">79°/70°</div>
+<div class="r Great">Great</div>    </button>
+    <button class="day" role="tab" id="tab-dock-2026-11-08" aria-controls="day-dock-2026-11-08" aria-selected="false" data-key="2026-11-08">
+      <div class="t">Sun</div>
+      <div class="i" aria-hidden="true">☀️</div>
+      <div class="hl">78°/64°</div>
+<div class="r Great">Great</div>    </button>
+    <button class="day" role="tab" id="tab-dock-2026-11-09" aria-controls="day-dock-2026-11-09" aria-selected="false" data-key="2026-11-09">
+      <div class="t">Mon</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">79°/64°</div>
+<div class="r Great">Great</div>    </button>
+    <button class="day" role="tab" id="tab-dock-2026-11-10" aria-controls="day-dock-2026-11-10" aria-selected="false" data-key="2026-11-10">
+      <div class="t">Tue</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">79°/65°</div>
+<div class="r Fair">Fair</div>    </button>
+    <button class="day" role="tab" id="tab-dock-2026-11-11" aria-controls="day-dock-2026-11-11" aria-selected="false" data-key="2026-11-11">
+      <div class="t">Wed</div>
+      <div class="i" aria-hidden="true">⛅</div>
+      <div class="hl">76°/67°</div>
+<div class="r Fair">Fair</div>    </button>
+  </nav>
+
+  <div class="panel" role="tabpanel" id="day-dock-2026-11-07" aria-labelledby="tab-dock-2026-11-07">
+    <section class="card hero">
+      <h2>This evening looks great.</h2>
+      <p>A moderate 1.3 ft falling tide runs through sunset, with the fastest water around 2:10–4:50 PM. Expect a breezy NNW wind around 10 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">12:51–6:07 PM</span><span class="pill Great">Great · 75</span></div>
+        <div class="score">Score 75: −20 small 1.3 ft fall, −5 10 mph wind</div>
+        <div class="facts">Moderate fall · 1.3 ft high-to-low (12:51 PM → 6:11 PM)<br>Fastest water ~2:10–4:50 PM<br>Peak flow overlaps sunset<br>Breezy · NNW 10 mph, gusts 17</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Depth at your dock</div>
+      <picture class="chart">
+        <source srcset="chart_dock_2026-11-07_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_dock_2026-11-07_light.png?v=202611071601" alt="Tide chart for Saturday, November 7: falling periods in blue" width="1325" height="552">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">LOW</div><div class="v">6:23 AM</div><div class="s">0.1 ft</div></div>
+        <div class="stat"><div class="k">HIGH</div><div class="v">12:51 PM</div><div class="s">2.3 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">6:11 PM</div><div class="s">1.0 ft</div></div>
+        <div class="stat"><div class="k">HIGH</div><div class="v">11:39 PM</div><div class="s">2.9 ft</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = falling water; darker blue = fastest water in a Prime, Great or Good window. Heights are depth at the dock. Dotted lines = 1 ft (getting shallow) and 0.5 ft (too shallow). <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+<div class="sub">Water is running +0.8 ft from prediction at Clearwater Beach (10:54 AM). Today&#39;s depths include +0.8 ft (the last day&#39;s average); later days +0.7 ft (last 30 days).</div>    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">70° – 79°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 7–12</div><div class="s">mph · gusts to 17</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">1%</div><div class="s">Max chance, afternoon</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">71°</div><div class="s">N 6</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">75°</div><div class="s">NNE 7</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">78°</div><div class="s">N 8</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">78°</div><div class="s">NNW 12</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">74°</div><div class="s">N 10</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">N 9</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px">
+        <div class="stat"><div class="k">First light</div><div class="v">6:22 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:46 · 5:42</div><div class="s">Last light 6:07 PM</div></div>
+<div class="stat"><div class="k">Water temp</div><div class="v">77°</div><div class="s">Clearwater Beach</div></div>      </div>
+      <div class="sub">
+<span class="ok">No active alerts</span> for Pinellas, Tampa Bay or coastal waters.<br>Bay and inland waters: a moderate chop (this afternoon).<br>
+Red tide: no FWC samples within 20 km over the last 8 days.      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-dock-2026-11-08" aria-labelledby="tab-dock-2026-11-08" hidden>
+    <section class="card hero">
+<div class="when">Sunday, November 8 · forecast</div>      <h2>Sunday evening looks great.</h2>
+      <p>A moderate 1.1 ft falling tide runs through sunset, with the fastest water around 2:50–5:20 PM. Expect a light NNW wind around 7 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">1:30–6:07 PM</span><span class="pill Great">Great · 80</span></div>
+        <div class="score">Score 80: −20 small 1.1 ft fall</div>
+        <div class="facts">Moderate fall · 1.1 ft high-to-low (1:30 PM → 6:40 PM)<br>Fastest water ~2:50–5:20 PM<br>Peak flow overlaps sunset<br>Calm · NNW 7 mph, gusts 13</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Depth at your dock</div>
+      <picture class="chart">
+        <source srcset="chart_dock_2026-11-08_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_dock_2026-11-08_light.png?v=202611071601" alt="Tide chart for Sunday, November 8: falling periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 3">
+        <div class="stat"><div class="k">LOW</div><div class="v">7:02 AM</div><div class="s">-0.1 ft</div></div>
+        <div class="stat"><div class="k">HIGH</div><div class="v">1:30 PM</div><div class="s">2.1 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">6:40 PM</div><div class="s">1.0 ft</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = falling water; darker blue = fastest water in a Prime, Great or Good window. Heights are depth at the dock. Dotted lines = 1 ft (getting shallow) and 0.5 ft (too shallow). <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">64° – 78°</div><div class="s">Sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 5–8</div><div class="s">mph · gusts to 13</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">64°</div><div class="s">NNE 6</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">70°</div><div class="s">NE 6</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">77°</div><div class="s">N 5</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">77°</div><div class="s">NNW 7</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">73°</div><div class="s">NNW 8</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">71°</div><div class="s">N 7</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:22 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:47 · 5:42</div><div class="s">Last light 6:07 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-dock-2026-11-09" aria-labelledby="tab-dock-2026-11-09" hidden>
+    <section class="card hero">
+<div class="when">Monday, November 9 · forecast</div>      <h2>Monday evening looks great.</h2>
+      <p>A moderate 1.0 ft falling tide runs through sunset, with the fastest water around 3:20–5:50 PM. Expect a light N wind around 7 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">2:06–6:06 PM</span><span class="pill Great">Great · 80</span></div>
+        <div class="score">Score 80: −20 small 1.0 ft fall</div>
+        <div class="facts">Moderate fall · 1.0 ft high-to-low (2:06 PM → 7:05 PM)<br>Fastest water ~3:20–5:50 PM<br>Peak flow overlaps sunset<br>Calm · N 7 mph, gusts 12</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Depth at your dock</div>
+      <picture class="chart">
+        <source srcset="chart_dock_2026-11-09_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_dock_2026-11-09_light.png?v=202611071601" alt="Tide chart for Monday, November 9: falling periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">HIGH</div><div class="v">12:05 AM</div><div class="s">2.8 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">7:39 AM</div><div class="s">-0.2 ft</div></div>
+        <div class="stat"><div class="k">HIGH</div><div class="v">2:06 PM</div><div class="s">2.0 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">7:05 PM</div><div class="s">1.0 ft</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = falling water; darker blue = fastest water in a Prime, Great or Good window. Heights are depth at the dock. Dotted lines = 1 ft (getting shallow) and 0.5 ft (too shallow). <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">64° – 79°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">NE 6–7</div><div class="s">mph · gusts to 12</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">64°</div><div class="s">ENE 7</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">71°</div><div class="s">ENE 7</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">78°</div><div class="s">ENE 6</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">79°</div><div class="s">N 7</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">75°</div><div class="s">N 7</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">N 7</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:23 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:48 · 5:41</div><div class="s">Last light 6:06 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-dock-2026-11-10" aria-labelledby="tab-dock-2026-11-10" hidden>
+    <section class="card hero">
+<div class="when">Tuesday, November 10 · forecast</div>      <h2>Tuesday evening is fair at best.</h2>
+      <p>A weak 0.8 ft falling tide runs through sunset, with the fastest water around 3:55–6:05 PM. Expect a light NNW wind around 5 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">2:44–6:06 PM</span><span class="pill Fair">Fair · 55</span></div>
+        <div class="score">Score 55: −45 weak 0.8 ft fall</div>
+        <div class="facts">Weak fall · 0.8 ft high-to-low (2:44 PM → 7:27 PM)<br>Fastest water ~3:55–6:05 PM<br>Peak flow overlaps sunset<br>Calm · NNW 5 mph, gusts 8</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Depth at your dock</div>
+      <picture class="chart">
+        <source srcset="chart_dock_2026-11-10_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_dock_2026-11-10_light.png?v=202611071601" alt="Tide chart for Tuesday, November 10: falling periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">HIGH</div><div class="v">12:33 AM</div><div class="s">2.9 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">8:16 AM</div><div class="s">-0.2 ft</div></div>
+        <div class="stat"><div class="k">HIGH</div><div class="v">2:44 PM</div><div class="s">1.9 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">7:27 PM</div><div class="s">1.1 ft</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = falling water; darker blue = fastest water in a Prime, Great or Good window. Heights are depth at the dock. Dotted lines = 1 ft (getting shallow) and 0.5 ft (too shallow). <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">65° – 79°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">ENE 3–7</div><div class="s">mph · gusts to 12</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">65°</div><div class="s">E 6</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">71°</div><div class="s">E 7</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">78°</div><div class="s">ESE 5</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">79°</div><div class="s">N 5</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">74°</div><div class="s">NNW 6</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">N 6</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:24 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:49 · 5:41</div><div class="s">Last light 6:06 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-dock-2026-11-11" aria-labelledby="tab-dock-2026-11-11" hidden>
+    <section class="card hero">
+<div class="when">Wednesday, November 11 · forecast</div>      <h2>Wednesday evening is fair at best.</h2>
+      <p>A weak 0.7 ft falling tide runs through sunset, with the fastest water around 4:30–6:05 PM. Expect a light NW wind around 6 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">3:27–6:05 PM</span><span class="pill Fair">Fair · 55</span></div>
+        <div class="score">Score 55: −45 weak 0.7 ft fall</div>
+        <div class="facts">Weak fall · 0.7 ft high-to-low (3:27 PM → 7:49 PM)<br>Fastest water ~4:30–6:05 PM<br>Peak flow overlaps sunset<br>Calm · NW 6 mph, gusts 9</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Depth at your dock</div>
+      <picture class="chart">
+        <source srcset="chart_dock_2026-11-11_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_dock_2026-11-11_light.png?v=202611071601" alt="Tide chart for Wednesday, November 11: falling periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">HIGH</div><div class="v">1:02 AM</div><div class="s">2.8 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">8:53 AM</div><div class="s">-0.2 ft</div></div>
+        <div class="stat"><div class="k">HIGH</div><div class="v">3:27 PM</div><div class="s">1.8 ft</div></div>
+        <div class="stat"><div class="k">LOW</div><div class="v">7:49 PM</div><div class="s">1.1 ft</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = falling water; darker blue = fastest water in a Prime, Great or Good window. Heights are depth at the dock. Dotted lines = 1 ft (getting shallow) and 0.5 ft (too shallow). <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">67° – 76°</div><div class="s">Partly cloudy</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 5–7</div><div class="s">mph · gusts to 9</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">8%</div><div class="s">Max chance, afternoon</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">67°</div><div class="s">ENE 5</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">72°</div><div class="s">ENE 5</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">75°</div><div class="s">NNW 6</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">75°</div><div class="s">NW 7</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">73°</div><div class="s">NNW 6</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">71°</div><div class="s">NNW 3</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:24 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:49 · 5:40</div><div class="s">Last light 6:05 PM</div></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Windows are condition-based, not fish forecasts. Each window starts at 100 points: Prime 90+, Great 75+, Good 60+, Fair 40+, Poor below. Points lost: fall 1.5–2 ft −10, 1–1.5 ft −20, under 1 ft −45; under 1 ft deep during the fastest water −25, only after it −10; fastest water misses first light and sunset −10 (midday −20); wind 9–12 mph −5, 13–15 mph −10, over 15 mph −20; SSW–WSW wind −10 more; gusts 20+ −5; rain chance 20%+ −5, 50%+ −10; storms −20; cool water (under 60°) −10; choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) −10. Prime also needs a fall of 2 ft or more, fastest water at first light or sunset, at least 1 ft deep, wind 8 mph or less and not SSW–WSW, rain under 20%, no storms, clear water. Red tide nearby or cold water (under 55°) is Skip. Heights are depth at the dock; a window ends once it drops below 0.5 ft. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates. Later days rely on longer-range weather forecasts.<br>
+Tides: NOAA 8726625 Indian Rocks Beach (inside) predictions, shifted +40 min for the dock, shown as depth at the dock (bottom 0.7 ft above MLLW, plus how far Clearwater Beach runs from prediction).<br>Weather: National Weather Service (updated 2:16 AM).<br>Observations: NOAA 8726724 Clearwater Beach.<br>Red tide: FWC Karenia brevis samples.<br>  </footer>
+  </div>
+  <div class="spot" id="spot-clearwater-pass" data-spot="clearwater-pass" hidden>
+
+  <nav class="days" role="tablist" aria-label="Days at Clearwater Pass">
+    <button class="day" role="tab" id="tab-clearwater-pass-2026-11-07" aria-controls="day-clearwater-pass-2026-11-07" aria-selected="true" data-key="2026-11-07">
+      <div class="t">Today</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">77°/69°</div>
+<div class="r Poor">Poor</div>    </button>
+    <button class="day" role="tab" id="tab-clearwater-pass-2026-11-08" aria-controls="day-clearwater-pass-2026-11-08" aria-selected="false" data-key="2026-11-08">
+      <div class="t">Sun</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">76°/62°</div>
+<div class="r Poor">Poor</div>    </button>
+    <button class="day" role="tab" id="tab-clearwater-pass-2026-11-09" aria-controls="day-clearwater-pass-2026-11-09" aria-selected="false" data-key="2026-11-09">
+      <div class="t">Mon</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">78°/63°</div>
+<div class="r Fair">Fair</div>    </button>
+    <button class="day" role="tab" id="tab-clearwater-pass-2026-11-10" aria-controls="day-clearwater-pass-2026-11-10" aria-selected="false" data-key="2026-11-10">
+      <div class="t">Tue</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">77°/63°</div>
+<div class="r none">—</div>    </button>
+    <button class="day" role="tab" id="tab-clearwater-pass-2026-11-11" aria-controls="day-clearwater-pass-2026-11-11" aria-selected="false" data-key="2026-11-11">
+      <div class="t">Wed</div>
+      <div class="i" aria-hidden="true">⛅</div>
+      <div class="hl">76°/67°</div>
+<div class="r Great">Great</div>    </button>
+  </nav>
+
+  <div class="panel" role="tabpanel" id="day-clearwater-pass-2026-11-07" aria-labelledby="tab-clearwater-pass-2026-11-07">
+    <section class="card hero">
+      <h2>A slow day for moving water.</h2>
+      <p>A weak 0.4 kt outgoing current runs 11:55 AM–3:55 PM, with the strongest current around 1:05–3:05 PM. Expect a breezy NNW wind around 9 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">11:55 AM–3:55 PM</span><span class="pill Poor">Poor · 20</span></div>
+        <div class="score">Score 20: −45 weak 0.4 kt outgoing current, −20 midday water, −15 9 mph wind</div>
+        <div class="facts">Weak outgoing current · 0.4 kt peak at 2:19 PM (slack 11:55 AM → 3:55 PM)<br>Strongest current ~1:05–3:05 PM<br>Midday — outside first light and sunset<br>Breezy · NNW 9 mph, gusts 16</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Clearwater Pass, 0.2 mi NE of Sand Key</div>
+      <picture class="chart">
+        <source srcset="chart_clearwater-pass_2026-11-07_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_clearwater-pass_2026-11-07_light.png?v=202611071601" alt="Current chart for Saturday, November 7: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">OUT</div><div class="v">1:44 AM</div><div class="s">1.5 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">7:52 AM</div><div class="s">1.7 kt</div></div>
+        <div class="stat"><div class="k">OUT</div><div class="v">2:19 PM</div><div class="s">0.4 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">6:58 PM</div><div class="s">1.3 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+<div class="sub">Water is running 0.8 ft above prediction at Clearwater Beach (10:54 AM). Water is being held in; lows may not drain as far as shown.</div>    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">69° – 77°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 5–10</div><div class="s">mph · gusts to 16</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">1%</div><div class="s">Max chance, afternoon</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">70°</div><div class="s">N 5</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">73°</div><div class="s">NNE 6</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">76°</div><div class="s">N 8</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">75°</div><div class="s">NNW 10</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">72°</div><div class="s">N 8</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">71°</div><div class="s">N 7</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px">
+        <div class="stat"><div class="k">First light</div><div class="v">6:22 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:47 · 5:42</div><div class="s">Last light 6:07 PM</div></div>
+<div class="stat"><div class="k">Water temp</div><div class="v">77°</div><div class="s">Clearwater Beach</div></div>      </div>
+      <div class="sub">
+<span class="ok">No active alerts</span> for Pinellas, Tampa Bay or coastal waters.<br>Bay and inland waters: a moderate chop (this afternoon).<br>
+Red tide: no FWC samples within 20 km over the last 8 days.      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-clearwater-pass-2026-11-08" aria-labelledby="tab-clearwater-pass-2026-11-08" hidden>
+    <section class="card hero">
+<div class="when">Sunday, November 8 · forecast</div>      <h2>A slow day for moving water.</h2>
+      <p>A weak 0.3 kt outgoing current runs 12:48–4:07 PM, with the strongest current around 1:50–3:30 PM. Expect a light NNW wind around 6 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">12:48–4:07 PM</span><span class="pill Poor">Poor · 35</span></div>
+        <div class="score">Score 35: −45 weak 0.3 kt outgoing current, −20 midday water</div>
+        <div class="facts">Weak outgoing current · 0.3 kt peak at 2:54 PM (slack 12:48 PM → 4:07 PM)<br>Strongest current ~1:50–3:30 PM<br>Midday — outside first light and sunset<br>Calm · NNW 6 mph, gusts 13</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Clearwater Pass, 0.2 mi NE of Sand Key</div>
+      <picture class="chart">
+        <source srcset="chart_clearwater-pass_2026-11-08_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_clearwater-pass_2026-11-08_light.png?v=202611071601" alt="Current chart for Sunday, November 8: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">OUT</div><div class="v">2:10 AM</div><div class="s">1.7 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">8:29 AM</div><div class="s">1.8 kt</div></div>
+        <div class="stat"><div class="k">OUT</div><div class="v">2:54 PM</div><div class="s">0.3 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">7:19 PM</div><div class="s">1.3 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">62° – 76°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 5–8</div><div class="s">mph · gusts to 13</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">62°</div><div class="s">NE 5</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">68°</div><div class="s">NE 5</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">75°</div><div class="s">N 5</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">75°</div><div class="s">NNW 7</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">72°</div><div class="s">NNW 7</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">70°</div><div class="s">N 6</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:22 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:47 · 5:41</div><div class="s">Last light 6:06 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-clearwater-pass-2026-11-09" aria-labelledby="tab-clearwater-pass-2026-11-09" hidden>
+    <section class="card hero">
+<div class="when">Monday, November 9 · forecast</div>      <h2>Monday evening is fair at best.</h2>
+      <p>A weak 0.2 kt outgoing current reaches sunset, though its strongest current (~2:35–3:55 PM) mostly falls outside it. Expect a light N wind around 6 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">1:43–4:19 PM</span><span class="pill Fair">Fair · 45</span></div>
+        <div class="score">Score 45: −45 weak 0.2 kt outgoing current, −10 strongest current outside first light/sunset</div>
+        <div class="facts">Weak outgoing current · 0.2 kt peak at 3:30 PM (slack 1:43 PM → 4:19 PM)<br>Strongest current ~2:35–3:55 PM<br>Calm · N 6 mph, gusts 13</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Clearwater Pass, 0.2 mi NE of Sand Key</div>
+      <picture class="chart">
+        <source srcset="chart_clearwater-pass_2026-11-09_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_clearwater-pass_2026-11-09_light.png?v=202611071601" alt="Current chart for Monday, November 9: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">OUT</div><div class="v">2:37 AM</div><div class="s">1.7 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">9:05 AM</div><div class="s">1.7 kt</div></div>
+        <div class="stat"><div class="k">OUT</div><div class="v">3:30 PM</div><div class="s">0.2 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">7:41 PM</div><div class="s">1.2 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">63° – 78°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">NE 5–7</div><div class="s">mph · gusts to 13</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">63°</div><div class="s">ENE 5</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">69°</div><div class="s">ENE 6</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">76°</div><div class="s">NE 6</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">77°</div><div class="s">N 7</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">73°</div><div class="s">N 7</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">70°</div><div class="s">NNE 6</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:23 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:48 · 5:41</div><div class="s">Last light 6:06 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-clearwater-pass-2026-11-10" aria-labelledby="tab-clearwater-pass-2026-11-10" hidden>
+    <section class="card hero">
+<div class="when">Tuesday, November 10 · forecast</div>      <h2>No outgoing current in daylight.</h2>
+      <p>The current is incoming or slack through the daylight hours on Tuesday.</p>
+    </section>
+
+
+    <section class="card">
+      <div class="label">Current at Clearwater Pass, 0.2 mi NE of Sand Key</div>
+      <picture class="chart">
+        <source srcset="chart_clearwater-pass_2026-11-10_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_clearwater-pass_2026-11-10_light.png?v=202611071601" alt="Current chart for Tuesday, November 10: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 3">
+        <div class="stat"><div class="k">OUT</div><div class="v">3:06 AM</div><div class="s">1.8 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">9:43 AM</div><div class="s">1.6 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">8:08 PM</div><div class="s">1.2 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">63° – 77°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">ENE 3–6</div><div class="s">mph · gusts to 10</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">63°</div><div class="s">E 5</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">69°</div><div class="s">E 6</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">76°</div><div class="s">ESE 3</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">77°</div><div class="s">N 5</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">73°</div><div class="s">NNW 5</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">N 6</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:24 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:49 · 5:40</div><div class="s">Last light 6:05 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-clearwater-pass-2026-11-11" aria-labelledby="tab-clearwater-pass-2026-11-11" hidden>
+    <section class="card hero">
+<div class="when">Wednesday, November 11 · forecast</div>      <h2>Wednesday morning looks great.</h2>
+      <p>A strong 1.7 kt outgoing current is still running at first light until slack at 7:25 AM; its strongest current comes before dawn. Expect a light ENE wind around 5 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">6:24–7:25 AM</span><span class="pill Great">Great · 90</span></div>
+        <div class="score">Score 90: −10 strongest current outside first light/sunset</div>
+        <div class="facts">Strong outgoing current · 1.7 kt peak at 3:40 AM (slack 11:20 PM → 7:25 AM)<br>Strongest current was before first light (~1:30–5:30 AM); slowing now<br>Calm · ENE 5 mph, gusts 7</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Clearwater Pass, 0.2 mi NE of Sand Key</div>
+      <picture class="chart">
+        <source srcset="chart_clearwater-pass_2026-11-11_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_clearwater-pass_2026-11-11_light.png?v=202611071601" alt="Current chart for Wednesday, November 11: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 3">
+        <div class="stat"><div class="k">OUT</div><div class="v">3:40 AM</div><div class="s">1.7 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">10:26 AM</div><div class="s">1.5 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">8:40 PM</div><div class="s">1.1 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">67° – 76°</div><div class="s">Partly cloudy</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 5–8</div><div class="s">mph · gusts to 10</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">7%</div><div class="s">Max chance, afternoon</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">67°</div><div class="s">ENE 5</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">72°</div><div class="s">NE 5</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">75°</div><div class="s">NNW 7</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">75°</div><div class="s">NW 8</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">73°</div><div class="s">NNW 6</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">71°</div><div class="s">NNW 5</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:24 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:50 · 5:40</div><div class="s">Last light 6:05 PM</div></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Windows are condition-based, not fish forecasts. Each window starts at 100 points: Prime 90+, Great 75+, Good 60+, Fair 40+, Poor below. Points lost: peak outgoing current 1–1.5 kt −10, 0.75–1 kt −20, under 0.75 kt −45; strongest current misses first light and sunset −10 (midday −20); wind 9–12 mph −15, 13–15 mph −30, over 15 mph −45; SSW–WNW wind −15 more; gusts 20+ −5; rain chance 20%+ −5, 50%+ −10; storms −20; cool water (under 60°) −10. Prime also needs a peak current of 1.5 kt or more, strongest current at first light or sunset, wind 8 mph or less and not SSW–WNW, rain under 20%, no storms, clear water. Red tide nearby, cold water (under 55°) or choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) is Skip. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates. Later days rely on longer-range weather forecasts.<br>
+Currents: NOAA ACT8656 Clearwater Pass, 0.2 mi NE of Sand Key predictions.<br>Weather: National Weather Service (updated 2:16 AM).<br>Observations: NOAA 8726724 Clearwater Beach.<br>Red tide: FWC Karenia brevis samples.<br>  </footer>
+  </div>
+  <div class="spot" id="spot-johns-pass" data-spot="johns-pass" hidden>
+
+  <nav class="days" role="tablist" aria-label="Days at Johns Pass">
+    <button class="day" role="tab" id="tab-johns-pass-2026-11-07" aria-controls="day-johns-pass-2026-11-07" aria-selected="true" data-key="2026-11-07">
+      <div class="t">Today</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">78°/71°</div>
+<div class="r Poor">Poor</div>    </button>
+    <button class="day" role="tab" id="tab-johns-pass-2026-11-08" aria-controls="day-johns-pass-2026-11-08" aria-selected="false" data-key="2026-11-08">
+      <div class="t">Sun</div>
+      <div class="i" aria-hidden="true">☀️</div>
+      <div class="hl">77°/65°</div>
+<div class="r Fair">Fair</div>    </button>
+    <button class="day" role="tab" id="tab-johns-pass-2026-11-09" aria-controls="day-johns-pass-2026-11-09" aria-selected="false" data-key="2026-11-09">
+      <div class="t">Mon</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">78°/66°</div>
+<div class="r Great">Great</div>    </button>
+    <button class="day" role="tab" id="tab-johns-pass-2026-11-10" aria-controls="day-johns-pass-2026-11-10" aria-selected="false" data-key="2026-11-10">
+      <div class="t">Tue</div>
+      <div class="i" aria-hidden="true">🌤️</div>
+      <div class="hl">78°/66°</div>
+<div class="r Great">Great</div>    </button>
+    <button class="day" role="tab" id="tab-johns-pass-2026-11-11" aria-controls="day-johns-pass-2026-11-11" aria-selected="false" data-key="2026-11-11">
+      <div class="t">Wed</div>
+      <div class="i" aria-hidden="true">⛅</div>
+      <div class="hl">76°/68°</div>
+<div class="r Great">Great</div>    </button>
+  </nav>
+
+  <div class="panel" role="tabpanel" id="day-johns-pass-2026-11-07" aria-labelledby="tab-johns-pass-2026-11-07">
+    <section class="card hero">
+      <h2>A slow day for moving water.</h2>
+      <p>A weak 0.5 kt outgoing current reaches sunset, though its strongest current (~12:50–3:30 PM) mostly falls outside it. Expect a breezy NNW wind around 11 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">11:29 AM–4:48 PM</span><span class="pill Poor">Poor · 30</span></div>
+        <div class="score">Score 30: −45 weak 0.5 kt outgoing current, −15 11 mph wind, −10 strongest current outside first light/sunset</div>
+        <div class="facts">Weak outgoing current · 0.5 kt peak at 2:09 PM (slack 11:29 AM → 4:48 PM)<br>Strongest current ~12:50–3:30 PM<br>Breezy · NNW 11 mph, gusts 17</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Johns Pass Entrance</div>
+      <picture class="chart">
+        <source srcset="chart_johns-pass_2026-11-07_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_johns-pass_2026-11-07_light.png?v=202611071601" alt="Current chart for Saturday, November 7: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">OUT</div><div class="v">2:17 AM</div><div class="s">1.5 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">8:34 AM</div><div class="s">0.5 kt</div></div>
+        <div class="stat"><div class="k">OUT</div><div class="v">2:09 PM</div><div class="s">0.5 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">6:32 PM</div><div class="s">0.3 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+<div class="sub">Water is running 0.8 ft above prediction at Clearwater Beach (10:54 AM). Water is being held in; lows may not drain as far as shown.</div>    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">71° – 78°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 7–14</div><div class="s">mph · gusts to 17</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">1%</div><div class="s">Max chance, afternoon</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">72°</div><div class="s">N 7</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">74°</div><div class="s">NNE 8</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">78°</div><div class="s">N 9</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">78°</div><div class="s">NNW 13</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">75°</div><div class="s">N 13</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">N 10</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px">
+        <div class="stat"><div class="k">First light</div><div class="v">6:21 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:46 · 5:42</div><div class="s">Last light 6:07 PM</div></div>
+<div class="stat"><div class="k">Water temp</div><div class="v">77°</div><div class="s">Clearwater Beach</div></div>      </div>
+      <div class="sub">
+<span class="ok">No active alerts</span> for Pinellas, Tampa Bay or coastal waters.<br>Bay and inland waters: a moderate chop (this afternoon).<br>
+Red tide: no FWC samples within 20 km over the last 8 days.      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-johns-pass-2026-11-08" aria-labelledby="tab-johns-pass-2026-11-08" hidden>
+    <section class="card hero">
+<div class="when">Sunday, November 8 · forecast</div>      <h2>Sunday evening is fair at best.</h2>
+      <p>A weak 0.3 kt outgoing current reaches sunset, though its strongest current (~1:35–4:00 PM) mostly falls outside it. Expect a light NNW wind around 7 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">12:28–5:11 PM</span><span class="pill Fair">Fair · 45</span></div>
+        <div class="score">Score 45: −45 weak 0.3 kt outgoing current, −10 strongest current outside first light/sunset</div>
+        <div class="facts">Weak outgoing current · 0.3 kt peak at 2:45 PM (slack 12:28 PM → 5:11 PM)<br>Strongest current ~1:35–4:00 PM<br>Calm · NNW 7 mph, gusts 13</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Johns Pass Entrance</div>
+      <picture class="chart">
+        <source srcset="chart_johns-pass_2026-11-08_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_johns-pass_2026-11-08_light.png?v=202611071601" alt="Current chart for Sunday, November 8: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">OUT</div><div class="v">2:56 AM</div><div class="s">1.7 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">9:10 AM</div><div class="s">0.5 kt</div></div>
+        <div class="stat"><div class="k">OUT</div><div class="v">2:45 PM</div><div class="s">0.3 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">7:14 PM</div><div class="s">0.4 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">65° – 77°</div><div class="s">Sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 5–10</div><div class="s">mph · gusts to 13</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">65°</div><div class="s">NNE 7</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">70°</div><div class="s">NE 7</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">76°</div><div class="s">N 5</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">77°</div><div class="s">NNW 8</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">74°</div><div class="s">NNW 10</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">N 9</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:22 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:47 · 5:42</div><div class="s">Last light 6:06 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-johns-pass-2026-11-09" aria-labelledby="tab-johns-pass-2026-11-09" hidden>
+    <section class="card hero">
+<div class="when">Monday, November 9 · forecast</div>      <h2>Monday morning looks great.</h2>
+      <p>A strong 1.8 kt outgoing current is still running at first light until slack at 7:15 AM; its strongest current comes before dawn. Expect a breezy ENE wind around 8 mph. The evening&#39;s weak 0.2 kt outgoing current rates Fair (weak 0.2 kt outgoing current).</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">6:23–7:15 AM</span><span class="pill Great">Great · 90</span></div>
+        <div class="score">Score 90: −10 strongest current outside first light/sunset</div>
+        <div class="facts">Strong outgoing current · 1.8 kt peak at 3:35 AM (slack 10:34 PM → 7:15 AM)<br>Strongest current was before first light (~1:05–5:25 AM); slowing now<br>Breezy · ENE 8 mph, gusts 12</div>
+      </div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">1:25–5:28 PM</span><span class="pill Fair">Fair · 55</span></div>
+        <div class="score">Score 55: −45 weak 0.2 kt outgoing current</div>
+        <div class="facts">Weak outgoing current · 0.2 kt peak at 3:18 PM (slack 1:25 PM → 5:28 PM)<br>Strongest current ~2:20–4:25 PM<br>Peak flow overlaps sunset<br>Calm · NNE 7 mph, gusts 12</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Johns Pass Entrance</div>
+      <picture class="chart">
+        <source srcset="chart_johns-pass_2026-11-09_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_johns-pass_2026-11-09_light.png?v=202611071601" alt="Current chart for Monday, November 9: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">OUT</div><div class="v">3:35 AM</div><div class="s">1.8 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">9:43 AM</div><div class="s">0.6 kt</div></div>
+        <div class="stat"><div class="k">OUT</div><div class="v">3:18 PM</div><div class="s">0.2 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">7:54 PM</div><div class="s">0.4 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">66° – 78°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">NE 6–9</div><div class="s">mph · gusts to 12</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">66°</div><div class="s">ENE 8</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">71°</div><div class="s">ENE 9</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">76°</div><div class="s">ENE 7</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">78°</div><div class="s">N 7</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">75°</div><div class="s">N 8</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">NNE 9</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:23 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:48 · 5:41</div><div class="s">Last light 6:06 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-johns-pass-2026-11-10" aria-labelledby="tab-johns-pass-2026-11-10" hidden>
+    <section class="card hero">
+<div class="when">Tuesday, November 10 · forecast</div>      <h2>Tuesday morning looks great.</h2>
+      <p>A strong 1.8 kt outgoing current is still running at first light until slack at 7:58 AM; its strongest current comes before dawn. Expect a breezy E wind around 8 mph. The evening&#39;s weak 0.1 kt outgoing current rates Fair (weak 0.1 kt outgoing current).</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">6:23–7:58 AM</span><span class="pill Great">Great · 90</span></div>
+        <div class="score">Score 90: −10 strongest current outside first light/sunset</div>
+        <div class="facts">Strong outgoing current · 1.8 kt peak at 4:16 AM (slack 10:57 PM → 7:58 AM)<br>Strongest current was before first light (~1:35–6:05 AM); slowing now<br>Breezy · E 8 mph, gusts 12</div>
+      </div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">2:19–5:37 PM</span><span class="pill Fair">Fair · 55</span></div>
+        <div class="score">Score 55: −45 weak 0.1 kt outgoing current</div>
+        <div class="facts">Weak outgoing current · 0.1 kt peak at 3:53 PM (slack 2:19 PM → 5:37 PM)<br>Strongest current ~3:05–4:45 PM<br>Peak flow overlaps sunset<br>Calm · NNW 5 mph, gusts 8</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Johns Pass Entrance</div>
+      <picture class="chart">
+        <source srcset="chart_johns-pass_2026-11-10_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_johns-pass_2026-11-10_light.png?v=202611071601" alt="Current chart for Tuesday, November 10: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 4">
+        <div class="stat"><div class="k">OUT</div><div class="v">4:16 AM</div><div class="s">1.8 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">10:17 AM</div><div class="s">0.6 kt</div></div>
+        <div class="stat"><div class="k">OUT</div><div class="v">3:53 PM</div><div class="s">0.1 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">8:32 PM</div><div class="s">0.4 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">66° – 78°</div><div class="s">Mostly sunny</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">ENE 5–8</div><div class="s">mph · gusts to 12</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">0%</div><div class="s">Daylight max</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">66°</div><div class="s">E 8</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">71°</div><div class="s">E 8</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">76°</div><div class="s">ESE 6</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">78°</div><div class="s">NNW 5</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">75°</div><div class="s">NNW 7</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">72°</div><div class="s">N 7</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:23 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:48 · 5:40</div><div class="s">Last light 6:05 PM</div></div>
+      </div>
+    </section>
+  </div>
+  <div class="panel" role="tabpanel" id="day-johns-pass-2026-11-11" aria-labelledby="tab-johns-pass-2026-11-11" hidden>
+    <section class="card hero">
+<div class="when">Wednesday, November 11 · forecast</div>      <h2>Wednesday morning looks great.</h2>
+      <p>A strong 1.8 kt outgoing current reaches first light, though its strongest current (~2:10–6:50 AM) mostly falls outside it. Expect a light ENE wind around 5 mph.</p>
+    </section>
+
+    <section class="card">
+      <div class="label">Best windows</div>
+      <div class="row">
+        <div class="row-head"><span class="row-title">6:24–8:42 AM</span><span class="pill Great">Great · 90</span></div>
+        <div class="score">Score 90: −10 strongest current outside first light/sunset</div>
+        <div class="facts">Strong outgoing current · 1.8 kt peak at 4:57 AM (slack 11:23 PM → 8:42 AM)<br>Strongest current ~6:25–6:50 AM<br>Calm · ENE 5 mph, gusts 8</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="label">Current at Johns Pass Entrance</div>
+      <picture class="chart">
+        <source srcset="chart_johns-pass_2026-11-11_dark.png?v=202611071601" media="(prefers-color-scheme: dark)">
+        <img src="chart_johns-pass_2026-11-11_light.png?v=202611071601" alt="Current chart for Wednesday, November 11: outgoing periods in blue" width="1325" height="552" loading="lazy">
+      </picture>
+      <div class="grid tides" style="--cols: 3">
+        <div class="stat"><div class="k">OUT</div><div class="v">4:57 AM</div><div class="s">1.8 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">10:53 AM</div><div class="s">0.5 kt</div></div>
+        <div class="stat"><div class="k">IN</div><div class="v">9:10 PM</div><div class="s">0.4 kt</div></div>
+      </div>
+      <div class="note"><b>Blue</b> = outgoing current (above the line), gray = incoming; darker blue = strongest current in a Prime, Great or Good window. <b>Shaded columns</b> = rain chance (darker = likelier; purple = storms). Bottom strip shows night, twilight and daylight.</div>
+    </section>
+
+    <section class="card">
+      <div class="label">Weather</div>
+      <div class="grid">
+        <div class="stat"><div class="k">Temperature</div><div class="v">68° – 76°</div><div class="s">Partly cloudy</div></div>
+        <div class="stat"><div class="k">Wind</div><div class="v">N 5–8</div><div class="s">mph · gusts to 10</div></div>
+        <div class="stat"><div class="k">Rain</div><div class="v">9%</div><div class="s">Max chance, afternoon</div></div>
+      </div>
+      <div class="grid blocks" style="--cols: 6">
+        <div class="stat"><div class="k">6a</div><div class="v">68°</div><div class="s">ENE 6</div></div>
+        <div class="stat"><div class="k">9a</div><div class="v">72°</div><div class="s">ENE 5</div></div>
+        <div class="stat"><div class="k">12p</div><div class="v">75°</div><div class="s">NNW 7</div></div>
+        <div class="stat"><div class="k">3p</div><div class="v">76°</div><div class="s">NW 8</div></div>
+        <div class="stat"><div class="k">6p</div><div class="v">73°</div><div class="s">NW 7</div></div>
+        <div class="stat"><div class="k">9p</div><div class="v">71°</div><div class="s">NNW 6</div></div>
+      </div>
+      <div class="grid" style="margin-top:14px;--cols:2">
+        <div class="stat"><div class="k">First light</div><div class="v">6:24 AM</div><div class="s">Civil twilight</div></div>
+        <div class="stat"><div class="k">Sunrise · Sunset</div><div class="v">6:49 · 5:40</div><div class="s">Last light 6:05 PM</div></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Windows are condition-based, not fish forecasts. Each window starts at 100 points: Prime 90+, Great 75+, Good 60+, Fair 40+, Poor below. Points lost: peak outgoing current 1–1.5 kt −10, 0.75–1 kt −20, under 0.75 kt −45; strongest current misses first light and sunset −10 (midday −20); wind 9–12 mph −15, 13–15 mph −30, over 15 mph −45; SSW–WNW wind −15 more; gusts 20+ −5; rain chance 20%+ −5, 50%+ −10; storms −20; cool water (under 60°) −10. Prime also needs a peak current of 1.5 kt or more, strongest current at first light or sunset, wind 8 mph or less and not SSW–WNW, rain under 20%, no storms, clear water. Red tide nearby, cold water (under 55°) or choppy, murky water (wind averaging 13 mph or more over the window and the 12 h before) is Skip. Water temperature and red tide use the latest reading for every day. Fastest-water times are estimates. Later days rely on longer-range weather forecasts.<br>
+Currents: NOAA JOP1101 Johns Pass Entrance predictions.<br>Weather: National Weather Service (updated 2:16 AM).<br>Observations: NOAA 8726724 Clearwater Beach.<br>Red tide: FWC Karenia brevis samples.<br>  </footer>
+  </div>
+</main>
+<script>
+  (function () {
+    // Spot picker and day strip. The app opens on the first spot (the dock), today; within a
+    // visit the URL hash (#spot/day) remembers the choice across the auto-reload.
+    function all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+    var spots = all(".spot");
+    var spotTabs = all(".spot-btn");
+    function show(spotId, key, remember) {
+      var spot = spots.filter(function (s) { return s.dataset.spot === spotId; })[0] || spots[0];
+      spots.forEach(function (s) { s.hidden = s !== spot; });
+      spotTabs.forEach(function (t) { t.setAttribute("aria-selected", t.dataset.spot === spot.dataset.spot ? "true" : "false"); });
+      var tabs = all(".day", spot);
+      var match = tabs.filter(function (t) { return t.dataset.key === key; })[0] || tabs[0];
+      tabs.forEach(function (t) {
+        var on = t === match;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        document.getElementById("day-" + spot.dataset.spot + "-" + t.dataset.key).hidden = !on;
+      });
+      if (remember) {
+        var home = spot === spots[0] && match === tabs[0];
+        history.replaceState(null, "", home ? location.pathname : "#" + spot.dataset.spot + "/" + match.dataset.key);
+      }
+    }
+    spotTabs.forEach(function (t) {
+      t.addEventListener("click", function () {
+        // Keep the same day when switching spots.
+        var visible = spots.filter(function (s) { return !s.hidden; })[0];
+        var day = all('.day[aria-selected="true"]', visible)[0];
+        show(t.dataset.spot, day && day.dataset.key, true);
+      });
+    });
+    all(".day").forEach(function (t) {
+      t.addEventListener("click", function () {
+        show(t.closest(".spot").dataset.spot, t.dataset.key, true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+    if (location.hash) {
+      var parts = location.hash.slice(1).split("/");
+      var isSpot = spots.some(function (s) { return s.dataset.spot === parts[0]; });
+      if (isSpot) show(parts[0], parts[1], false);
+      else show(spots[0].dataset.spot, parts[0], false);  // email links: #YYYY-MM-DD at the dock
+    }
+
+    // Warn only when a scheduled update is overdue, not during the normal overnight gap,
+    // and pull a fresh copy when the app is reopened.
+    var loadedAt = Date.now();
+    var updated = document.getElementById("updated");
+    var generated = new Date(updated.dataset.generated);
+    var slots = (updated.dataset.schedule || "").split(",").filter(Boolean);  // UTC "HH:MM"
+    function nextSlotAfter(t) {
+      for (var day = 0; day < 2; day++) {
+        var best = null;
+        slots.forEach(function (s) {
+          var hm = s.split(":");
+          var when = Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate() + day, +hm[0], +hm[1]);
+          if (when > t.getTime() && (best === null || when < best)) best = when;
+        });
+        if (best !== null) return best;
+      }
+      return t.getTime() + 6 * 36e5;  // no schedule known: expect an update within 6 h
+    }
+    var due = nextSlotAfter(generated);
+    var GRACE = 90 * 60 * 1000;  // a run takes minutes; this also covers a queued GitHub runner
+    if (Date.now() > due + GRACE) {
+      var clockOf = function (ms) { return new Date(ms).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); };
+      var el = document.getElementById("stale");
+      el.textContent = "No update since " + clockOf(generated.getTime()) + ". The update scheduled for " +
+        clockOf(due) + " hasn't finished. It may have failed; check the workflow on GitHub.";
+      el.style.display = "block";
+    }
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible" && Date.now() - loadedAt > 15 * 60 * 1000) location.reload();
+    });
+  })();
+</script>
+</body>
+</html>
