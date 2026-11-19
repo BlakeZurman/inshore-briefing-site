@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" width="200" height="130">
+  <!-- "Bones of the deep": a fish skeleton with a ghostly glint in its eye. Captain's Log theme's art for a red
+       tide day (theme.css). Original drawing. -->
+  <style>
+    .sway { transform-origin: 100px 65px; animation: sway 4.5s ease-in-out infinite; }
+    @keyframes sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg) translateY(-3px); } }
+    .glow { animation: glow 2.2s ease-in-out infinite; }
+    @keyframes glow { 0%, 100% { opacity: .35; } 40% { opacity: 1; } 55% { opacity: .6; } 70% { opacity: .95; } }
+    @media (prefers-reduced-motion: reduce) { .sway, .glow { animation: none; } }
+  </style>
+  <g class="sway" stroke="#2B1D0E" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M80 66 L 162 66" stroke-width="5"/>
+    <g stroke-width="3.2">
+      <path d="M90 66 Q 96 40 92 30"/><path d="M90 66 Q 96 92 92 102"/>
+      <path d="M103 66 Q 109 42 105 33"/><path d="M103 66 Q 109 90 105 99"/>
+      <path d="M116 66 Q 121 45 118 37"/><path d="M116 66 Q 121 87 118 95"/>
+      <path d="M129 66 Q 133 49 131 42"/><path d="M129 66 Q 133 83 131 90"/>
+      <path d="M142 66 Q 145 53 143 48"/><path d="M142 66 Q 145 79 143 84"/>
+    </g>
+    <g fill="#F1E5C6" stroke-width="2"><circle cx="90" cy="66" r="3.4"/><circle cx="103" cy="66" r="3.4"/><circle cx="116" cy="66" r="3.4"/><circle cx="129" cy="66" r="3.2"/><circle cx="142" cy="66" r="3"/><circle cx="153" cy="66" r="2.8"/></g>
+    <path d="M160 66 L 188 42 C 182 56, 182 76, 188 90 Z" fill="#F1E5C6" stroke-width="3"/>
+    <path d="M166 66 L 182 52 M166 66 L 184 66 M166 66 L 182 80" stroke-width="1.4" opacity=".6"/>
+    <path d="M28 66 C 28 44, 52 34, 70 41 C 79 45, 83 56, 83 66 C 83 79, 74 89, 60 91 C 43 93, 28 85, 28 66 Z" fill="#F1E5C6" stroke-width="3.2"/>
+    <path d="M28 70 L 50 74 L 32 84" stroke-width="2.8" fill="#E2D2A8"/>
+    <path d="M33 71 L 35 75 L 38 71.5 L 40 76 L 43 72.5" stroke-width="1.6"/>
+    <path d="M66 46 C 72 54, 72 78, 66 86" stroke-width="2"/>
+    <circle cx="53" cy="58" r="9" fill="#24302A" stroke-width="2.5"/>
+    <circle class="glow" cx="54" cy="59" r="4" fill="#7CF5C9" stroke="none"/>
+    <circle class="glow" cx="54" cy="59" r="8" fill="#7CF5C9" stroke="none" opacity=".25"/>
+    <path d="M40 48 l 3 3 M44 45 l 2 4" stroke-width="1.4" opacity=".6"/>
+  </g>
+</svg>
